@@ -8,7 +8,7 @@ namespace ChiaseNoiBo
 {
     public partial class Login : Form
     {
-        private const string DefaultPassword = "phcn@123"; // Mật khẩu cố định
+
 
         public Login()
         {
@@ -45,7 +45,7 @@ namespace ChiaseNoiBo
             {
                 ShowMessage("✅ Đăng nhập thành công!", "Thông báo", Guna.UI2.WinForms.MessageDialogIcon.Information);
                 this.Hide();
-                new Home(username).Show();
+                new Home1(username).Show();
             }
             else
             {
@@ -104,7 +104,7 @@ namespace ChiaseNoiBo
                         string excelEmail = worksheet.Cells[row, 3].Text.Trim();
                         string username = worksheet.Cells[row, 2].Text.Trim();
 
-                        if (email == excelEmail && password == DefaultPassword)
+                        if (email == excelEmail && password == "phcn@123")
                         {
                             return username;
                         }

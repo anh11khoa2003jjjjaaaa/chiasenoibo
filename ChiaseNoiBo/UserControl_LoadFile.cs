@@ -33,22 +33,34 @@ namespace ChiaseNoiBo
         {
 
             InitializeComponent();
+            flowLayoutPanel1.SizeChanged += flowLayoutPanel1_SizeChanged;
+
 
         }
 
         private async void UserControl_LoadFile_Load(object sender, EventArgs e)
         {
-            if (this.ParentForm is Home homeForm)
+            if (this.ParentForm is Home1 homeForm)
             {
                 guna2MessageDialog1.Parent = homeForm;
             }
-            await LoadExcelFilesAsync();
+            //await LoadExcelFilesAsync();
+        }
+        private void flowLayoutPanel1_SizeChanged(object sender, EventArgs e)
+        {
+            foreach (Control ctrl in flowLayoutPanel1.Controls)
+            {
+                if (ctrl is Button btn)
+                {
+                    btn.Width = flowLayoutPanel1.ClientSize.Width - 25;
+                }
+            }
         }
 
         /// <summary>
         /// Lấy danh sách file Excel trong thư mục Google Drive và hiển thị lên panel1
         /// </summary>
-        private async Task LoadExcelFilesAsync()
+        public async Task LoadExcelFilesAsync()
         {
             try
             {
@@ -68,6 +80,7 @@ namespace ChiaseNoiBo
                 }
 
                 flowLayoutPanel1.Controls.Clear(); // Xóa danh sách cũ
+               
 
                 // Sử dụng FlowLayoutPanel để tự động sắp xếp
 
@@ -77,14 +90,15 @@ namespace ChiaseNoiBo
                     {
                         Text = file.Name,
                         Tag = file.Id,
-                        Width = panel1.Width - 20,
+                        Width = flowLayoutPanel1.ClientSize.Width - 25,
                         Height = 50, // Tăng chiều cao để tránh bị cắt chữ
                         BackColor = System.Drawing.Color.WhiteSmoke,
                         FlatStyle = FlatStyle.Flat,
                         TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                        Padding = new Padding(10, 5, 10, 5),
+                        Padding = new Padding(0, 5, 10, 5),
                         Font = new Font("Segoe UI", 12, FontStyle.Regular), // Tăng kích thước chữ
                         Margin = new Padding(5, 5, 5, 5) // Tạo khoảng cách giữa các nút
+                        
                     };
 
                     fileButton.FlatAppearance.BorderSize = 0;
@@ -100,6 +114,63 @@ namespace ChiaseNoiBo
             {
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
                 guna2MessageDialog1.Show($"Lỗi khi tải danh sách file: {ex.Message}", "Lỗi");
+            }
+        }
+
+
+        public async Task LoadWordAndPdfFilesAsync()
+        {
+            try
+            {
+                var service = GoogleDriveHelper.GetDriveService();
+                var request = service.Files.List();
+
+                // MIME types cho Word và PDF
+                request.Q = $"'{FolderId}' in parents and (" +
+                            "mimeType='application/vnd.openxmlformats-officedocument.wordprocessingml.document' or " + // .docx
+                            "mimeType='application/msword' or " + // .doc
+                            "mimeType='application/pdf')"; // .pdf
+
+                request.Fields = "files(id, name)";
+
+                var result = await request.ExecuteAsync();
+
+                if (result.Files == null || result.Files.Count == 0)
+                {
+                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    guna2MessageDialog1.Show("Không tìm thấy file Word hoặc PDF nào trong thư mục!", "Thông báo");
+                    return;
+                }
+
+                flowLayoutPanel1.Controls.Clear(); // Xóa danh sách cũ
+
+                foreach (var file in result.Files)
+                {
+                    Button fileButton = new Button
+                    {
+                        Text = file.Name,
+                        Tag = file.Id,
+                        Width = flowLayoutPanel1.ClientSize.Width - 25,
+                        Height = 50,
+                        BackColor = System.Drawing.Color.WhiteSmoke,
+                        FlatStyle = FlatStyle.Flat,
+                        TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
+                        Padding = new Padding(0, 5, 10, 5),
+                        Font = new Font("Segoe UI", 12, FontStyle.Regular),
+                        Margin = new Padding(5, 5, 5, 5)
+                    };
+
+                    fileButton.FlatAppearance.BorderSize = 0;
+                    fileButton.Click += FileButton_Click; // Xử lý mở hoặc tải về tùy ý
+                    flowLayoutPanel1.Controls.Add(fileButton);
+                }
+
+                flowLayoutPanel1.AutoScroll = true;
+            }
+            catch (Exception ex)
+            {
+                guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                guna2MessageDialog1.Show($"Lỗi khi tải danh sách file Word/PDF: {ex.Message}", "Lỗi");
             }
         }
 
@@ -435,6 +506,11 @@ namespace ChiaseNoiBo
                 //_updateCancellationTokenSource?.Cancel();
                 //CleanupUpdateStatusUI();
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private async Task ShowUpdateCountdownAsync(System.Windows.Forms.Label lblStatus, CancellationToken token)
