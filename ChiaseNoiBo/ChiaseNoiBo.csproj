@@ -226,6 +226,12 @@
       <DependentUpon>DonXinNghiPhepControl.cs</DependentUpon>
     </Compile>
     <Compile Include="FileListLoader.cs" />
+    <Compile Include="Form3_LoadExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3_LoadExcel.Designer.cs">
+      <DependentUpon>Form3_LoadExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\FileViewer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -274,6 +280,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3_LoadExcel.resx">
+      <DependentUpon>Form3_LoadExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home1.resx">
       <DependentUpon>Home1.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +322,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-close-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.3\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />

@@ -52,7 +52,7 @@ namespace ChiaseNoiBo
             }
         }
 
-        private async Task<MemoryStream> DownloadFileFromGoogleDriveAsync(string fileId)
+        public async Task<MemoryStream> DownloadFileFromGoogleDriveAsync(string fileId)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace ChiaseNoiBo
             }
         }
 
-        private async Task LoadExcelToGridAsync(string filePath)
+        public async Task LoadExcelToGridAsync(string filePath)
         {
             try
             {
@@ -114,13 +114,13 @@ namespace ChiaseNoiBo
             return dt;
         }
 
-        private void ShowError(string message)
+        public void ShowError(string message)
         {
             guna2MessageDialog1.Icon = MessageDialogIcon.Error;
             guna2MessageDialog1.Show(message, "Lỗi");
         }
 
-        private void ShowPreview(string fileName, string filePath)
+        public void ShowPreview(string fileName, string filePath)
         {
             string ext = Path.GetExtension(fileName).ToLower();
 

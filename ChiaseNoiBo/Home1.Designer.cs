@@ -41,10 +41,15 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_version = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -52,6 +57,9 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Button2
@@ -214,25 +222,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.tableLayoutPanel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 676);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1014, 40);
             this.panel3.TabIndex = 26;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1014, 40);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "© 2025  Hệ thống chia sẻ thông tin nội bộ / Bản quyền thuộc Anh Khoa | Hướng dẫn " +
-    "bởi Lê Quốc Thái";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // panel4
             // 
@@ -264,6 +259,86 @@
             this.panel2.Size = new System.Drawing.Size(1014, 716);
             this.panel2.TabIndex = 0;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Silver;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.Controls.Add(this.panel10, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel9, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1014, 40);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.tableLayoutPanel1.SetRowSpan(this.panel10, 2);
+            this.panel10.Size = new System.Drawing.Size(855, 34);
+            this.panel10.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.IndianRed;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(855, 34);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "© 2025  Hệ thống chia sẻ thông tin nội bộ / Huỳnh Anh Khoa| Hướng dẫn bởi Lê Quốc" +
+    " Thái";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btn_version);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(864, 3);
+            this.panel9.Name = "panel9";
+            this.tableLayoutPanel1.SetRowSpan(this.panel9, 2);
+            this.panel9.Size = new System.Drawing.Size(147, 34);
+            this.panel9.TabIndex = 2;
+            // 
+            // btn_version
+            // 
+            this.btn_version.BackColor = System.Drawing.Color.Transparent;
+            this.btn_version.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_version.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_version.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_version.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_version.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_version.FillColor = System.Drawing.Color.Silver;
+            this.btn_version.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_version.ForeColor = System.Drawing.Color.IndianRed;
+            this.btn_version.Location = new System.Drawing.Point(0, 0);
+            this.btn_version.Name = "btn_version";
+            this.btn_version.Size = new System.Drawing.Size(147, 34);
+            this.btn_version.TabIndex = 0;
+            this.btn_version.Text = "Phiên bản 1.0.9";
+            this.btn_version.UseTransparentBackground = true;
+            this.btn_version.Click += new System.EventHandler(this.guna2Button6_Click_1);
+            // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = null;
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialog1.Parent = this;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog1.Text = null;
+            // 
             // Home1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -282,6 +357,9 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -297,12 +375,17 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel9;
+        private Guna.UI2.WinForms.Guna2Button btn_version;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
     }
 }

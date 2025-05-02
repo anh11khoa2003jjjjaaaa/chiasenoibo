@@ -17,12 +17,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using File = System.IO.File;
+using Label = System.Windows.Forms.Label;
 
 namespace ChiaseNoiBo
 {
     public partial class UserControl_LoadFile : UserControl
     {
-        private string SharedDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        public  string SharedDirectory = AppDomain.CurrentDomain.BaseDirectory;
         private GoogleDriveHelper gg=new GoogleDriveHelper();
       
         private static string FolderId = "15viUYINHRFLMIuCNVI4khVOHZgMf13jN"; // Thư mục chứa file Excel
@@ -80,45 +81,104 @@ namespace ChiaseNoiBo
                 }
 
                 flowLayoutPanel1.Controls.Clear(); // Xóa danh sách cũ
-               
+
 
                 // Sử dụng FlowLayoutPanel để tự động sắp xếp
-
                 foreach (var file in result.Files.Where(f => f.Name != "DanhSachTaiKhoan.xlsx"))
                 {
-                    Button fileButton = new Button
+                    // Panel chứa cả tên file và icon
+                    var filePanel = new Panel
                     {
-                        Text = file.Name,
-                        Tag = file.Id,
                         Width = flowLayoutPanel1.ClientSize.Width - 25,
-                        Height = 50, // Tăng chiều cao để tránh bị cắt chữ
-                        BackColor = System.Drawing.Color.WhiteSmoke,
-                        FlatStyle = FlatStyle.Flat,
-                        TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                        Padding = new Padding(0, 5, 10, 5),
-                        Font = new Font("Segoe UI", 12, FontStyle.Regular), // Tăng kích thước chữ
-                        Margin = new Padding(5, 5, 5, 5) // Tạo khoảng cách giữa các nút
-                        
+                        Height = 50,
+                        BackColor = Color.WhiteSmoke,
+                        Margin = new Padding(5),
+                        Padding = new Padding(5),
+                        Tag = file.Id
                     };
 
-                    fileButton.FlatAppearance.BorderSize = 0;
-                    fileButton.Click += FileButton_Click;
-                    flowLayoutPanel1.Controls.Add(fileButton);
+                    // Nút hiển thị tên file
+                    var fileLabel = new Label
+                    {
+                        Text = file.Name,
+                        AutoSize = false,
+                        Width = filePanel.Width - 60, // Trừ phần icon
+                        Height = 40,
+                        Font = new Font("Segoe UI", 12),
+                        TextAlign = ContentAlignment.MiddleLeft,
+                        Dock = DockStyle.Left,
+                        Cursor = Cursors.Hand,
+                        Padding = new Padding(5, 10, 5, 5),
+                        Tag = file.Id
+                    };
+                    fileLabel.Click += FileButton_Click;
+
+                    // Icon tải xuống
+                    var downloadIcon = new PictureBox
+                    {
+                        Image = Properties.Resources.icon_download, // Đảm bảo bạn thêm icon "download" vào Resources
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        Width = 32,
+                        Height = 32,
+                        Cursor = Cursors.Hand,
+                        Dock = DockStyle.Right,
+                        Margin = new Padding(5),
+                        Tag = file // Truyền cả object để lấy ID & Name
+                    };
+                    downloadIcon.Click += async (s, e) =>
+                    {
+                        var picBox = s as PictureBox;
+                        var driveFile = picBox.Tag as Google.Apis.Drive.v3.Data.File;
+
+                        using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                        {
+                            saveFileDialog.FileName = driveFile.Name;
+                            saveFileDialog.Filter = "Excel Files|*.xlsx;*.xls|CSV Files|*.csv|All Files|*.*";
+                            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                            {
+                                try
+                                {
+                                    var requestDownload = service.Files.Get(driveFile.Id);
+                                    var stream = new MemoryStream();
+                                    await requestDownload.DownloadAsync(stream);
+
+                                    // Lưu file
+                                    File.WriteAllBytes(saveFileDialog.FileName, stream.ToArray());
+
+                                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                                    guna2MessageDialog1.Show("Tải file thành công!", "Thông báo");
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                                    guna2MessageDialog1.Show(ex.Message, "Thông báo");
+                                   
+                                }
+                            }
+                        }
+                    };
+
+                    // Thêm vào panel
+                    filePanel.Controls.Add(fileLabel);
+                    filePanel.Controls.Add(downloadIcon);
+                    flowLayoutPanel1.Controls.Add(filePanel);
                 }
-
-                flowLayoutPanel1.AutoScroll = true; // Bật cuộn nếu danh sách dài
-
-
+                flowLayoutPanel1.AutoScroll = true;
+                
             }
             catch (Exception ex)
             {
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
                 guna2MessageDialog1.Show($"Lỗi khi tải danh sách file: {ex.Message}", "Lỗi");
             }
+
         }
+            
+    
 
 
-        public async Task LoadWordAndPdfFilesAsync()
+    public async Task LoadWordAndPdfFilesAsync()
         {
             try
             {
@@ -178,19 +238,41 @@ namespace ChiaseNoiBo
         /// <summary>
         /// Xử lý khi người dùng nhấn vào file để mở
         /// </summary>
+        //private void FileButton_Click(object sender, EventArgs e)
+        //{
+        //    Button btn = sender as Button;
+        //    string fileId = btn.Tag.ToString();
+        //    string fileName = btn.Text;
+
+        //    // Mở Form1 để hiển thị nội dung file
+        //    Form1 form = new Form1(fileId, fileName);
+        //    form.Show();
+        //}
         private void FileButton_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             string fileId = btn.Tag.ToString();
             string fileName = btn.Text;
 
-            // Mở Form1 để hiển thị nội dung file
-            Form1 form = new Form1(fileId, fileName);
-            form.Show();
+            // Lấy phần mở rộng file (không phân biệt hoa thường)
+            string extension = Path.GetExtension(fileName).ToLower();
+
+            if (extension == ".xlsx" || extension == ".xls" || extension == ".csv")
+            {
+                // Nếu là file Excel hoặc CSV => mở Form3
+                Form3_LoadExcel form = new Form3_LoadExcel(fileId, fileName);
+                form.Show();
+            }
+            else
+            {
+                // Mặc định mở Form1
+                Form1 form = new Form1(fileId, fileName);
+                form.Show();
+            }
         }
 
 
-        private async Task<string> CheckOnlineVersion(DriveService service)
+        public async Task<string> CheckOnlineVersion(DriveService service)
         {
             try
             {
@@ -239,7 +321,7 @@ namespace ChiaseNoiBo
             }
         }
 
-        private async Task<bool> DownloadFileFromDrive(DriveService service, string folderId, string fileName, string downloadPath)
+        public async Task<bool> DownloadFileFromDrive(DriveService service, string folderId, string fileName, string downloadPath)
         {
             try
             {
@@ -276,7 +358,7 @@ namespace ChiaseNoiBo
         }
 
 
-        private async Task<string> GetLatestMsiFileName(DriveService service, string folderId)
+        public async Task<string> GetLatestMsiFileName(DriveService service, string folderId)
         {
             try
             {
@@ -362,7 +444,7 @@ namespace ChiaseNoiBo
 
         
 
-        private void InstallMsi(string msiFilePath)
+        public void InstallMsi(string msiFilePath)
         {
             try
             {
@@ -412,7 +494,7 @@ namespace ChiaseNoiBo
             }
         }
 
-        private void RestartApplication()
+        public void RestartApplication()
         {
             Process.Start(new ProcessStartInfo
             {
