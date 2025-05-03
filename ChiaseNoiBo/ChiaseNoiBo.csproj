@@ -207,17 +207,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BieuMauTangLuong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BieuMauTangLuong.Designer.cs">
-      <DependentUpon>BieuMauTangLuong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DonDeXuatTangLuongControl.cs">
+    <Compile Include="DeXuatTangLuongControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DonDeXuatTangLuongControl.Designer.cs">
-      <DependentUpon>DonDeXuatTangLuongControl.cs</DependentUpon>
+    <Compile Include="DeXuatTangLuongControl.Designer.cs">
+      <DependentUpon>DeXuatTangLuongControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DonXinNghiPhepControl.cs">
       <SubType>UserControl</SubType>
@@ -268,11 +262,8 @@
     <Compile Include="UserControl_LoadFile.Designer.cs">
       <DependentUpon>UserControl_LoadFile.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BieuMauTangLuong.resx">
-      <DependentUpon>BieuMauTangLuong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DonDeXuatTangLuongControl.resx">
-      <DependentUpon>DonDeXuatTangLuongControl.cs</DependentUpon>
+    <EmbeddedResource Include="DeXuatTangLuongControl.resx">
+      <DependentUpon>DeXuatTangLuongControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DonXinNghiPhepControl.resx">
       <DependentUpon>DonXinNghiPhepControl.cs</DependentUpon>

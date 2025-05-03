@@ -60,118 +60,118 @@ namespace ChiaseNoiBo
                 return new List<Google.Apis.Drive.v3.Data.File>();
             }
         }
+        //Gui mail khi co file moi
+    //    public static void CheckForNewFiles()
+    //    {
+    //        var files = GetSpreadsheetFiles();
+    //        var newFiles = files.Where(f => !previousFileIds.Contains(f.Id)).ToList();
 
-        public static void CheckForNewFiles()
-        {
-            var files = GetSpreadsheetFiles();
-            var newFiles = files.Where(f => !previousFileIds.Contains(f.Id)).ToList();
+    //        if (newFiles.Any())
+    //        {
+    //            string message = "📢 Hệ thống thông báo:\n";
+    //            foreach (var file in newFiles)
+    //            {
+    //                message += $"- File mới: {file.Name}\n";
+    //            }
 
-            if (newFiles.Any())
-            {
-                string message = "📢 Hệ thống thông báo:\n";
-                foreach (var file in newFiles)
-                {
-                    message += $"- File mới: {file.Name}\n";
-                }
+    //            SendEmailNotification(message);
+    //            previousFileIds = files.Select(f => f.Id).ToList();
+    //        }
+    //    }
 
-                SendEmailNotification(message);
-                previousFileIds = files.Select(f => f.Id).ToList();
-            }
-        }
+    //    public static void SendEmailNotification(string message)
+    //    {
+    //        string smtpServer = "smtp.gmail.com";
+    //        int port = 587;
+    //        string fromEmail = "huynhanhkhoa30042019@gmail.com";
+    //        string password = Environment.GetEnvironmentVariable("GMAIL_APP_PASSWORD"); // Dùng biến môi trường thay vì hardcode
+    //        if (string.IsNullOrEmpty(password))
+    //        {
+    //            Console.WriteLine("❌ Lỗi: Mật khẩu Gmail không được cấu hình trong biến môi trường.");
+    //            return;
+    //        }
 
-        public static void SendEmailNotification(string message)
-        {
-            string smtpServer = "smtp.gmail.com";
-            int port = 587;
-            string fromEmail = "huynhanhkhoa30042019@gmail.com";
-            string password = Environment.GetEnvironmentVariable("GMAIL_APP_PASSWORD"); // Dùng biến môi trường thay vì hardcode
-            if (string.IsNullOrEmpty(password))
-            {
-                Console.WriteLine("❌ Lỗi: Mật khẩu Gmail không được cấu hình trong biến môi trường.");
-                return;
-            }
+    //        string excelFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DanhSachTaiKhoan.xlsx");
+    //        List<string> emailList = ExcelHelper.GetEmailsFromExcel(excelFilePath);
 
-            string excelFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DanhSachTaiKhoan.xlsx");
-            List<string> emailList = ExcelHelper.GetEmailsFromExcel(excelFilePath);
+    //        if (!emailList.Any())
+    //        {
+    //            Console.WriteLine("❌ Không có email nào trong danh sách.");
+    //            return;
+    //        }
 
-            if (!emailList.Any())
-            {
-                Console.WriteLine("❌ Không có email nào trong danh sách.");
-                return;
-            }
+    //        try
+    //        {
+    //            var emailMessage = new MimeMessage();
+    //            emailMessage.From.Add(new MailboxAddress("Hệ thống", fromEmail));
+    //            emailList.ForEach(email => emailMessage.To.Add(new MailboxAddress(email, email)));
 
-            try
-            {
-                var emailMessage = new MimeMessage();
-                emailMessage.From.Add(new MailboxAddress("Hệ thống", fromEmail));
-                emailList.ForEach(email => emailMessage.To.Add(new MailboxAddress(email, email)));
+    //            emailMessage.Subject = "📢 Thông báo: File mới trong thư mục Google Drive";
+    //            emailMessage.Body = new TextPart("plain")
+    //            {
+    //                Text = $"Xin chào,\n\n"
+    //                     + $"Hệ thống có một thông báo mới 📢. Hãy vào xem để cập nhật thông tin mới nhất!\n\n"
+    //                     + $"📂 Chi tiết:\n"
+    //                     + $"{message}\n\n"
+    //                     + "Vui lòng kiểm tra ngay!\n\n"
+    //                     + "Trân trọng,\n"
+    //                     + "Hệ thống thông báo"
+    //            };
 
-                emailMessage.Subject = "📢 Thông báo: File mới trong thư mục Google Drive";
-                emailMessage.Body = new TextPart("plain")
-                {
-                    Text = $"Xin chào,\n\n"
-                         + $"Hệ thống có một thông báo mới 📢. Hãy vào xem để cập nhật thông tin mới nhất!\n\n"
-                         + $"📂 Chi tiết:\n"
-                         + $"{message}\n\n"
-                         + "Vui lòng kiểm tra ngay!\n\n"
-                         + "Trân trọng,\n"
-                         + "Hệ thống thông báo"
-                };
+    //            using (var client = new SmtpClient())
+    //            {
+    //                client.Connect(smtpServer, port, false);
+    //                client.Authenticate(fromEmail, password);
+    //                client.Send(emailMessage);
+    //                client.Disconnect(true);
+    //            }
 
-                using (var client = new SmtpClient())
-                {
-                    client.Connect(smtpServer, port, false);
-                    client.Authenticate(fromEmail, password);
-                    client.Send(emailMessage);
-                    client.Disconnect(true);
-                }
+    //            Console.WriteLine("✅ Email thông báo đã được gửi!");
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine($"❌ Lỗi khi gửi email: {ex.Message}");
+    //        }
+    //    }
+    //}
 
-                Console.WriteLine("✅ Email thông báo đã được gửi!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"❌ Lỗi khi gửi email: {ex.Message}");
-            }
-        }
-    }
+    //internal class ExcelHelper
+    //{
+    //    public static List<string> GetEmailsFromExcel(string filePath)
+    //    {
+    //        var emailList = new List<string>();
 
-    internal class ExcelHelper
-    {
-        public static List<string> GetEmailsFromExcel(string filePath)
-        {
-            var emailList = new List<string>();
+    //        ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Để tránh lỗi bản quyền
 
-            ExcelPackage.LicenseContext = LicenseContext.NonCommercial; // Để tránh lỗi bản quyền
+    //        if (!System.IO.File.Exists(filePath))
+    //        {
+    //            Console.WriteLine("❌ Không tìm thấy file Excel!");
+    //            return emailList;
+    //        }
 
-            if (!System.IO.File.Exists(filePath))
-            {
-                Console.WriteLine("❌ Không tìm thấy file Excel!");
-                return emailList;
-            }
+    //        try
+    //        {
+    //            using (var package = new ExcelPackage(new FileInfo(filePath)))
+    //            {
+    //                var worksheet = package.Workbook.Worksheets[0]; // Lấy sheet đầu tiên
+    //                int rowCount = worksheet.Dimension.Rows;
 
-            try
-            {
-                using (var package = new ExcelPackage(new FileInfo(filePath)))
-                {
-                    var worksheet = package.Workbook.Worksheets[0]; // Lấy sheet đầu tiên
-                    int rowCount = worksheet.Dimension.Rows;
+    //                for (int row = 2; row <= rowCount; row++) // Bỏ qua tiêu đề (bắt đầu từ dòng 2)
+    //                {
+    //                    string email = worksheet.Cells[row, 3].Text.Trim();
+    //                    if (!string.IsNullOrEmpty(email))
+    //                    {
+    //                        emailList.Add(email);
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine($"❌ Lỗi khi đọc file Excel: {ex.Message}");
+    //        }
 
-                    for (int row = 2; row <= rowCount; row++) // Bỏ qua tiêu đề (bắt đầu từ dòng 2)
-                    {
-                        string email = worksheet.Cells[row, 3].Text.Trim();
-                        if (!string.IsNullOrEmpty(email))
-                        {
-                            emailList.Add(email);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"❌ Lỗi khi đọc file Excel: {ex.Message}");
-            }
-
-            return emailList;
-        }
+    //        return emailList;
+    //    }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace ChiaseNoiBo
 {
-    partial class DonXinNghiPhepControl
+    partial class DeXuatTangLuongControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -40,22 +40,20 @@ namespace ChiaseNoiBo
             this.label3 = new System.Windows.Forms.Label();
             this.txt_bophan = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2DateTime_batdau = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2NumericUpDown1_hientai = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.row2Panel = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_chucvu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker_ketthuc = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2NumericUpDown2_mongmuon = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.row3Panel = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_nguoithaythe = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_bophanthaythe = new System.Windows.Forms.TextBox();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.row4Panel = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1_lydo = new System.Windows.Forms.RichTextBox();
             this.buttonPanel = new System.Windows.Forms.Panel();
             this.guna2Button1_huy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2_luu = new Guna.UI2.WinForms.Guna2Button();
@@ -63,7 +61,9 @@ namespace ChiaseNoiBo
             this.headerPanel.SuspendLayout();
             this.formPanel.SuspendLayout();
             this.row1Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1_hientai)).BeginInit();
             this.row2Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2_mongmuon)).BeginInit();
             this.row3Panel.SuspendLayout();
             this.row4Panel.SuspendLayout();
             this.buttonPanel.SuspendLayout();
@@ -112,7 +112,7 @@ namespace ChiaseNoiBo
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(1008, 54);
             this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "ĐƠN XIN NGHỈ PHÉP";
+            this.titleLabel.Text = "ĐƠN ĐỀ XUẤT TĂNG LƯƠNG";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formPanel
@@ -145,7 +145,7 @@ namespace ChiaseNoiBo
             this.row1Panel.Controls.Add(this.label3, 1, 0);
             this.row1Panel.Controls.Add(this.txt_bophan, 1, 1);
             this.row1Panel.Controls.Add(this.label5, 2, 0);
-            this.row1Panel.Controls.Add(this.guna2DateTime_batdau, 2, 1);
+            this.row1Panel.Controls.Add(this.guna2NumericUpDown1_hientai, 2, 1);
             this.row1Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row1Panel.Location = new System.Drawing.Point(3, 3);
             this.row1Panel.Name = "row1Panel";
@@ -184,7 +184,7 @@ namespace ChiaseNoiBo
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(328, 30);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Thuộc phòng ban";
+            this.label3.Text = "Thuộc bộ phận";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_bophan
@@ -205,23 +205,20 @@ namespace ChiaseNoiBo
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(328, 30);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Từ ngày";
+            this.label5.Text = "Tiền lương hiện tại";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2DateTime_batdau
+            // guna2NumericUpDown1_hientai
             // 
-            this.guna2DateTime_batdau.Checked = true;
-            this.guna2DateTime_batdau.CustomFormat = "dddd, dd MMMM yyyy";
-            this.guna2DateTime_batdau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2DateTime_batdau.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTime_batdau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTime_batdau.Location = new System.Drawing.Point(671, 33);
-            this.guna2DateTime_batdau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTime_batdau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTime_batdau.Name = "guna2DateTime_batdau";
-            this.guna2DateTime_batdau.Size = new System.Drawing.Size(328, 32);
-            this.guna2DateTime_batdau.TabIndex = 5;
-            this.guna2DateTime_batdau.Value = new System.DateTime(2025, 4, 30, 11, 32, 19, 524);
+            this.guna2NumericUpDown1_hientai.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1_hientai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1_hientai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2NumericUpDown1_hientai.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown1_hientai.Location = new System.Drawing.Point(671, 34);
+            this.guna2NumericUpDown1_hientai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDown1_hientai.Name = "guna2NumericUpDown1_hientai";
+            this.guna2NumericUpDown1_hientai.Size = new System.Drawing.Size(328, 30);
+            this.guna2NumericUpDown1_hientai.TabIndex = 5;
             // 
             // row2Panel
             // 
@@ -234,7 +231,7 @@ namespace ChiaseNoiBo
             this.row2Panel.Controls.Add(this.label4, 1, 0);
             this.row2Panel.Controls.Add(this.txt_chucvu, 1, 1);
             this.row2Panel.Controls.Add(this.label6, 2, 0);
-            this.row2Panel.Controls.Add(this.guna2DateTimePicker_ketthuc, 2, 1);
+            this.row2Panel.Controls.Add(this.guna2NumericUpDown2_mongmuon, 2, 1);
             this.row2Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row2Panel.Location = new System.Drawing.Point(3, 77);
             this.row2Panel.Name = "row2Panel";
@@ -273,7 +270,7 @@ namespace ChiaseNoiBo
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(328, 30);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Vị trí";
+            this.label4.Text = "Chức vụ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txt_chucvu
@@ -294,23 +291,20 @@ namespace ChiaseNoiBo
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(328, 30);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Đến ngày";
+            this.label6.Text = "Tiền lương mong muốn";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2DateTimePicker_ketthuc
+            // guna2NumericUpDown2_mongmuon
             // 
-            this.guna2DateTimePicker_ketthuc.Checked = true;
-            this.guna2DateTimePicker_ketthuc.CustomFormat = "dddd, dd MMMM yyyy";
-            this.guna2DateTimePicker_ketthuc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2DateTimePicker_ketthuc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker_ketthuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker_ketthuc.Location = new System.Drawing.Point(671, 33);
-            this.guna2DateTimePicker_ketthuc.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker_ketthuc.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker_ketthuc.Name = "guna2DateTimePicker_ketthuc";
-            this.guna2DateTimePicker_ketthuc.Size = new System.Drawing.Size(328, 18);
-            this.guna2DateTimePicker_ketthuc.TabIndex = 5;
-            this.guna2DateTimePicker_ketthuc.Value = new System.DateTime(2025, 4, 30, 11, 32, 19, 524);
+            this.guna2NumericUpDown2_mongmuon.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown2_mongmuon.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown2_mongmuon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2NumericUpDown2_mongmuon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown2_mongmuon.Location = new System.Drawing.Point(671, 34);
+            this.guna2NumericUpDown2_mongmuon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDown2_mongmuon.Name = "guna2NumericUpDown2_mongmuon";
+            this.guna2NumericUpDown2_mongmuon.Size = new System.Drawing.Size(328, 16);
+            this.guna2NumericUpDown2_mongmuon.TabIndex = 5;
             // 
             // row3Panel
             // 
@@ -320,9 +314,7 @@ namespace ChiaseNoiBo
             this.row3Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.row3Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.row3Panel.Controls.Add(this.label8, 0, 0);
-            this.row3Panel.Controls.Add(this.txt_nguoithaythe, 0, 1);
-            this.row3Panel.Controls.Add(this.label9, 1, 0);
-            this.row3Panel.Controls.Add(this.txt_bophanthaythe, 1, 1);
+            this.row3Panel.Controls.Add(this.guna2DateTimePicker1, 0, 1);
             this.row3Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row3Panel.Location = new System.Drawing.Point(3, 137);
             this.row3Panel.Name = "row3Panel";
@@ -340,46 +332,30 @@ namespace ChiaseNoiBo
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(244, 30);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Người thay thế";
+            this.label8.Text = "Ngày bắt đầu";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txt_nguoithaythe
+            // guna2DateTimePicker1
             // 
-            this.txt_nguoithaythe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_nguoithaythe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nguoithaythe.Location = new System.Drawing.Point(3, 33);
-            this.txt_nguoithaythe.Multiline = true;
-            this.txt_nguoithaythe.Name = "txt_nguoithaythe";
-            this.txt_nguoithaythe.Size = new System.Drawing.Size(244, 24);
-            this.txt_nguoithaythe.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(253, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(244, 30);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "Bộ phận thay thế";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txt_bophanthaythe
-            // 
-            this.txt_bophanthaythe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_bophanthaythe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_bophanthaythe.Location = new System.Drawing.Point(253, 33);
-            this.txt_bophanthaythe.Multiline = true;
-            this.txt_bophanthaythe.Name = "txt_bophanthaythe";
-            this.txt_bophanthaythe.Size = new System.Drawing.Size(244, 24);
-            this.txt_bophanthaythe.TabIndex = 3;
+            this.guna2DateTimePicker1.Checked = true;
+            this.guna2DateTimePicker1.CustomFormat = "dddd, dd MMMM yyyy";
+            this.guna2DateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(3, 33);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(244, 24);
+            this.guna2DateTimePicker1.TabIndex = 5;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 4, 30, 11, 32, 19, 524);
             // 
             // row4Panel
             // 
             this.row4Panel.ColumnCount = 1;
             this.row4Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.row4Panel.Controls.Add(this.label7, 0, 0);
-            this.row4Panel.Controls.Add(this.richTextBox1, 0, 1);
+            this.row4Panel.Controls.Add(this.richTextBox1_lydo, 0, 1);
             this.row4Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.row4Panel.Location = new System.Drawing.Point(3, 203);
             this.row4Panel.Name = "row4Panel";
@@ -400,15 +376,15 @@ namespace ChiaseNoiBo
             this.label7.Text = "Lý do";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // richTextBox1
+            // richTextBox1_lydo
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(3, 33);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(996, 167);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.richTextBox1_lydo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1_lydo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1_lydo.Location = new System.Drawing.Point(3, 33);
+            this.richTextBox1_lydo.Name = "richTextBox1_lydo";
+            this.richTextBox1_lydo.Size = new System.Drawing.Size(996, 167);
+            this.richTextBox1_lydo.TabIndex = 1;
+            this.richTextBox1_lydo.Text = "";
             // 
             // buttonPanel
             // 
@@ -452,23 +428,24 @@ namespace ChiaseNoiBo
             this.guna2Button2_luu.Text = "Lưu";
             this.guna2Button2_luu.Click += new System.EventHandler(this.guna2Button2_luu_Click);
             // 
-            // DonXinNghiPhepControl
+            // DeXuatTangLuongControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainPanel);
-            this.Name = "DonXinNghiPhepControl";
+            this.Name = "DeXuatTangLuongControl";
             this.Size = new System.Drawing.Size(1014, 626);
-            this.Load += new System.EventHandler(this.DonXinNghiPhepControl_Load);
+            this.Load += new System.EventHandler(this.DeXuatTangLuongControl_Load);
             this.mainPanel.ResumeLayout(false);
             this.headerPanel.ResumeLayout(false);
             this.formPanel.ResumeLayout(false);
             this.row1Panel.ResumeLayout(false);
             this.row1Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1_hientai)).EndInit();
             this.row2Panel.ResumeLayout(false);
             this.row2Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2_mongmuon)).EndInit();
             this.row3Panel.ResumeLayout(false);
-            this.row3Panel.PerformLayout();
             this.row4Panel.ResumeLayout(false);
             this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -486,25 +463,23 @@ namespace ChiaseNoiBo
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_bophan;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTime_batdau;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private System.Windows.Forms.TableLayoutPanel row2Panel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_chucvu;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker_ketthuc;
         private System.Windows.Forms.TableLayoutPanel row3Panel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_nguoithaythe;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_bophanthaythe;
         private System.Windows.Forms.TableLayoutPanel row4Panel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1_lydo;
         private System.Windows.Forms.Panel buttonPanel;
         private Guna.UI2.WinForms.Guna2Button guna2Button1_huy;
         private Guna.UI2.WinForms.Guna2Button guna2Button2_luu;
         public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2_mongmuon;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1_hientai;
     }
 }

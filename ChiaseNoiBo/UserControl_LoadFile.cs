@@ -174,9 +174,7 @@ namespace ChiaseNoiBo
             }
 
         }
-            
-    
-
+          
 
     public async Task LoadWordAndPdfFilesAsync()
         {
@@ -250,9 +248,11 @@ namespace ChiaseNoiBo
         //}
         private void FileButton_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
-            string fileId = btn.Tag.ToString();
-            string fileName = btn.Text;
+            Control control = sender as Control;
+            if (control == null || control.Tag == null) return;
+            string fileId = control.Tag.ToString();
+            string fileName = control.Text;
+
 
             // Lấy phần mở rộng file (không phân biệt hoa thường)
             string extension = Path.GetExtension(fileName).ToLower();

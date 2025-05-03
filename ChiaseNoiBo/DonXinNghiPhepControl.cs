@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DocumentFormat.OpenXml.Packaging;
@@ -22,6 +24,8 @@ namespace ChiaseNoiBo
         public DonXinNghiPhepControl()
         {
             InitializeComponent();
+           
+            
         }
 
         public string Lanhdao => txt_lanhdao.Text;
@@ -33,7 +37,7 @@ namespace ChiaseNoiBo
         public string BoPhanThayThe => txt_bophanthaythe.Text;
         public string TuNgay => guna2DateTime_batdau.Value.ToShortDateString();
         public string DenNgay => guna2DateTimePicker_ketthuc.Value.ToShortDateString();
-
+       
         private void label1_Click(object sender, EventArgs e)
         {
             // Xử lý sự kiện click nếu cần
@@ -113,12 +117,20 @@ namespace ChiaseNoiBo
                 // Thay thế nội dung trong file
                 ReplacePlaceholders(tempPath, replacements);
 
-                // Chọn nơi lưu file
+                // Lấy thư mục Downloads của người dùng hoặc Temp tùy ý
+                string defaultFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),"Downloads");
+                // hoặc Downloads
+
+                // Gọi hàm để tạo tên file tự động
+                string suggestedPath = GetUniqueFileName(defaultFolder, "DonXinNghiPhep", ".docx");
+
                 SaveFileDialog dialog = new SaveFileDialog
                 {
                     Filter = "Word Documents (*.docx)|*.docx",
-                    FileName = "DonXinNghiPhep_Filled.docx"
+                    FileName = Path.GetFileName(suggestedPath),
+                    InitialDirectory = defaultFolder
                 };
+
 
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
@@ -133,7 +145,34 @@ namespace ChiaseNoiBo
                 ShowMessage("Lỗi: " + ex.Message, "Lỗi", Guna.UI2.WinForms.MessageDialogIcon.Error);
             }
         }
+        private string GetUniqueFileName(string folderPath, string baseName, string extension, int maxTries = 50)
+        {
+            for (int i = 1; i <= maxTries; i++)
+            {
+                string fileName = $"{baseName}_{i}{extension}";
+                string fullPath = Path.Combine(folderPath, fileName);
 
+                if (!File.Exists(fullPath))
+                    return fullPath;
+            }
+
+            throw new IOException("Không thể tạo file mới. Đã đạt giới hạn số lần thử.");
+        }
+
+        //private void ShowMessage(string message, string title, Guna.UI2.WinForms.MessageDialogIcon icon)
+        //{
+        //    var mainForm = this.FindForm() as Home1;
+
+        //    if (mainForm != null)
+        //    {
+        //        mainForm.ShowMessage(message, title, icon);
+        //    }
+        //    else
+        //    {
+        //        // Nếu không phải là Home1 hoặc không tìm thấy form
+        //        MessageBox.Show(message, title, MessageBoxButtons.OK, GetMessageBoxIcon(icon));
+        //    }
+        //}
         private void ShowMessage(string message, string title, Guna.UI2.WinForms.MessageDialogIcon icon)
         {
             var mainForm = this.FindForm() as Home1;
@@ -144,10 +183,19 @@ namespace ChiaseNoiBo
             }
             else
             {
-                // Nếu không phải là Home1 hoặc không tìm thấy form
-                MessageBox.Show(message, title, MessageBoxButtons.OK, GetMessageBoxIcon(icon));
+                // Tạo Guna2MessageDialog tạm nếu không có form chính
+                Guna.UI2.WinForms.Guna2MessageDialog dialog = new Guna.UI2.WinForms.Guna2MessageDialog();
+                dialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                dialog.Icon = icon;
+                dialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+                dialog.Caption = title;
+                dialog.Text = message;
+
+                // Đảm bảo dialog nằm giữa màn hình
+                
             }
         }
+
 
 
         private MessageBoxIcon GetMessageBoxIcon(Guna.UI2.WinForms.MessageDialogIcon icon)
@@ -185,8 +233,30 @@ namespace ChiaseNoiBo
         }
         private void guna2Button1_huy_Click(object sender, EventArgs e)
         {
-            ResetData();
+            // Tìm form chính
+            var mainForm = this.FindForm() as Home1;
+
+            // Tạo dialog xác nhận
+            Guna.UI2.WinForms.Guna2MessageDialog dialog = new Guna.UI2.WinForms.Guna2MessageDialog
+            {
+                Parent = mainForm, // đảm bảo dialog nằm giữa form cha
+                Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo,
+                Caption = "Xác nhận",
+                Text = "Bạn có chắc muốn hủy thao tác không?",
+                Icon = Guna.UI2.WinForms.MessageDialogIcon.Question,
+                Style = Guna.UI2.WinForms.MessageDialogStyle.Light
+            };
+
+            // Hiển thị dialog và lấy kết quả
+            var result = dialog.Show();
+
+            if (result == DialogResult.Yes)
+            {
+                // Gọi Reset nếu người dùng đồng ý hủy
+                ResetData();
+            }
         }
+
         private bool ValidateFormInputs(out string errorMessage)
         {
             StringBuilder sb = new StringBuilder();
@@ -222,5 +292,19 @@ namespace ChiaseNoiBo
             return string.IsNullOrEmpty(errorMessage);
         }
 
+        private void DonXinNghiPhepControl_Load(object sender, EventArgs e)
+        {
+            CultureInfo viCulture = new CultureInfo("vi-VN");
+
+            // Đặt mặc định cho toàn app (nên dùng)
+            CultureInfo.DefaultThreadCurrentCulture = viCulture;
+            CultureInfo.DefaultThreadCurrentUICulture = viCulture;
+
+            guna2DateTime_batdau.Format = DateTimePickerFormat.Custom;
+            guna2DateTime_batdau.CustomFormat = "'Ngày' dd 'tháng' MM 'năm' yyyy";
+            guna2DateTimePicker_ketthuc.Format = DateTimePickerFormat.Custom;
+            guna2DateTimePicker_ketthuc.CustomFormat = "'Ngày' dd 'tháng' MM 'năm' yyyy";
+
+        }
     }
 }

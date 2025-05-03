@@ -33,6 +33,9 @@ namespace ChiaseNoiBo
         {
             InitializeComponent();
             this.excelusername = excelusername;
+            guna2MessageDialog12 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            guna2MessageDialog12.Parent = this;
+            userControl_LoadFile = new UserControl_LoadFile();
 
         }
         public void LoadUserControl(UserControl uc)
@@ -96,7 +99,7 @@ namespace ChiaseNoiBo
             }
             else if (guna2ComboBox1.SelectedItem.ToString() == "Đề xuất tăng lương")
             {
-                var control = new DonDeXuatTangLuongControl();
+                var control = new DeXuatTangLuongControl();
                 control.Dock = DockStyle.Fill;
                 panel2.Controls.Add(control);
             }

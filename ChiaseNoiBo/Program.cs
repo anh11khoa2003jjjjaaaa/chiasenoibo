@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +18,10 @@ namespace ChiaseNoiBo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Thiết lập văn hóa Việt Nam
+            CultureInfo viCulture = new CultureInfo("vi-VN");
+            Thread.CurrentThread.CurrentCulture = viCulture;
+            Thread.CurrentThread.CurrentUICulture = viCulture;
             Application.Run(new Home1());
         }
     }

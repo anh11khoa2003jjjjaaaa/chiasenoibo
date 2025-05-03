@@ -101,11 +101,10 @@ D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\Spire.Doc.dll
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\Spire.License.dll
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\Spire.Doc.xml
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\Spire.License.xml
-D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.BieuMauTangLuong.resources
-D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.DonDeXuatTangLuongControl.resources
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.DonXinNghiPhepControl.resources
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.dll
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.Framework.dll
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.xml
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.Framework.xml
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.Form3_LoadExcel.resources
+D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.DeXuatTangLuongControl.resources
