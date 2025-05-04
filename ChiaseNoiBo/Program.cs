@@ -18,11 +18,11 @@ namespace ChiaseNoiBo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Thiết lập văn hóa Việt Nam
-            CultureInfo viCulture = new CultureInfo("vi-VN");
-            Thread.CurrentThread.CurrentCulture = viCulture;
-            Thread.CurrentThread.CurrentUICulture = viCulture;
-            Application.Run(new Home1());
+            //Thiết lập văn hóa Việt Nam
+            //CultureInfo viCulture = new CultureInfo("vi-VN");
+            //Thread.CurrentThread.CurrentCulture = viCulture;
+            //Thread.CurrentThread.CurrentUICulture = viCulture;
+            Application.Run(new Login());
         }
     }
 }

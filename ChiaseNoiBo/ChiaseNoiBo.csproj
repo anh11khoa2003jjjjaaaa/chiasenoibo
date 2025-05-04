@@ -220,6 +220,12 @@
       <DependentUpon>DonXinNghiPhepControl.cs</DependentUpon>
     </Compile>
     <Compile Include="FileListLoader.cs" />
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3_LoadExcel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadExcel.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateNotificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DonXinNghiPhepControl.resx">
       <DependentUpon>DonXinNghiPhepControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -290,6 +305,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateNotificationForm.resx">
       <DependentUpon>UpdateNotificationForm.cs</DependentUpon>
     </EmbeddedResource>

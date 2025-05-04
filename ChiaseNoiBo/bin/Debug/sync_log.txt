@@ -1,0 +1,4 @@
+[5/4/2025 11:44:30 AM] Lỗi đồng bộ: The service drive has thrown an exception. HttpStatusCode is Forbidden. Request had insufficient authentication scopes.
+[5/4/2025 11:51:12 AM] Lỗi đồng bộ: The service drive has thrown an exception. HttpStatusCode is Forbidden. Request had insufficient authentication scopes.
+[5/4/2025 11:51:43 AM] Lỗi đồng bộ: The service drive has thrown an exception. HttpStatusCode is Forbidden. The user does not have sufficient permissions for this file.
+[5/4/2025 11:55:43 AM] Lỗi đồng bộ: The service drive has thrown an exception. HttpStatusCode is Forbidden. The user does not have sufficient permissions for this file.

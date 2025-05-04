@@ -108,3 +108,5 @@ D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\DocumentFormat.O
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.Framework.xml
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.Form3_LoadExcel.resources
 D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.DeXuatTangLuongControl.resources
+D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.ForgotPassword.resources
+D:\Project\Nam4_hk1\TTCS&TTTN\ChiaseNoiBo\ChiaseNoiBo\obj\Debug\ChiaseNoiBo.Register.resources

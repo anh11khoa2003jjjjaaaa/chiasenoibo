@@ -17,7 +17,7 @@ namespace ChiaseNoiBo
         private const string CredentialPath = "credentials.json"; // Đường dẫn credentials.json
         private const string ApplicationName = "GoogleDriveUploader";
         public static string FolderId { get; } = "15viUYINHRFLMIuCNVI4khVOHZgMf13jN"; // Thư mục Google Drive chứa file
-        private static readonly string[] Scopes = { DriveService.Scope.DriveReadonly };
+        private static readonly string[] Scopes = { DriveService.Scope.Drive };
         private static List<string> previousFileIds = new List<string>(); // Danh sách file đã kiểm tra trước đó
 
         public static DriveService GetDriveService()

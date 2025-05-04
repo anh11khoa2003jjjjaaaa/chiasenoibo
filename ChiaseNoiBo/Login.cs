@@ -1,6 +1,8 @@
 ﻿using OfficeOpenXml;
 using System;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -34,12 +36,28 @@ namespace ChiaseNoiBo
                 await PerformLogin();
             }
         }
+        public static string HashPasswordSHA256(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] inputBytes = Encoding.UTF8.GetBytes(password);
+                byte[] hashBytes = sha256.ComputeHash(inputBytes);
 
+                // Convert bytes to hex string
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in hashBytes)
+                    sb.Append(b.ToString("x2")); // "x2" to get hex format
+
+                return sb.ToString();
+            }
+        }
         private async Task PerformLogin()
         {
             string email = txt_email.Text.Trim();
             string password = txt_password.Text.Trim();
-            string username = await AuthenticateUser(email, password);
+            string hashedPassword = HashPasswordSHA256(password+"_phcn");
+
+            string username = await AuthenticateUser(email, hashedPassword);
 
             if (username != null)
             {
@@ -103,8 +121,9 @@ namespace ChiaseNoiBo
                     {
                         string excelEmail = worksheet.Cells[row, 3].Text.Trim();
                         string username = worksheet.Cells[row, 2].Text.Trim();
+                        string pass = worksheet.Cells[row, 4].Text.Trim();
 
-                        if (email == excelEmail && password == "phcn@123")
+                        if (email == excelEmail && password == pass)
                         {
                             return username;
                         }
@@ -123,6 +142,13 @@ namespace ChiaseNoiBo
         {
             guna2MessageDialog1.Icon = icon;
             guna2MessageDialog1.Show(message, title);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
         }
     }
 }
