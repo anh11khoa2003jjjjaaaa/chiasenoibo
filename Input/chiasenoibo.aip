@@ -7,10 +7,10 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="ChiaseNoiBo.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="TTTN"/>
-    <ROW Property="ProductCode" Value="1033:{89936F51-9900-4C4A-B087-9D537B907E0E} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{FEEF1B6C-9AD9-4706-8F12-3C0D868F34BD} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="chiasenoibo"/>
-    <ROW Property="ProductVersion" Value="1.0.9"/>
+    <ROW Property="ProductVersion" Value="1.0.13"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{37EBF563-EA0F-4D30-98CB-93F8C88CF48A}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="AnyCPU_Debug:Windows 9x/ME" ValueLocId="-"/>
@@ -34,22 +34,44 @@
     <ROW Component="BouncyCastle.Cryptography.dll" ComponentId="{2234633A-0807-4D15-9FDE-8005A0D8BB75}" Directory_="APPDIR" Attributes="0" KeyPath="BouncyCastle.Cryptography.dll"/>
     <ROW Component="ChiaseNoiBo.exe" ComponentId="{6E04D213-1B4B-46C7-8F4B-7EE676E423E9}" Directory_="APPDIR" Attributes="0" KeyPath="ChiaseNoiBo.exe"/>
     <ROW Component="ChiaseNoiBo.exe.config" ComponentId="{69CA6288-CFBE-419A-A6B1-1A05327FA8C0}" Directory_="APPDIR" Attributes="0" KeyPath="ChiaseNoiBo.exe.config" Type="0"/>
+    <ROW Component="DevExpress.Data.Desktop.v24.1.dll" ComponentId="{89A3231C-2357-4781-81C5-EB560B0867E4}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.Desktop.v24.1.dll"/>
+    <ROW Component="DevExpress.Data.v24.1.dll" ComponentId="{F4B5EC27-A4C8-4692-AA5D-4B89178B8367}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v24.1.dll"/>
+    <ROW Component="DevExpress.Drawing.v24.1.dll" ComponentId="{0E2F7237-2C33-44CF-BD1F-015D674EEAEE}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Drawing.v24.1.dll"/>
+    <ROW Component="DevExpress.Pdf.v24.1.Core.dll" ComponentId="{9BA877FC-47CC-4BA4-BD0A-211E01FD330B}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Pdf.v24.1.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v24.1.Drawing.dll" ComponentId="{C990D564-B190-4079-A9A1-99C0FA8F31F0}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Pdf.v24.1.Drawing.dll"/>
+    <ROW Component="DevExpress.Printing.v24.1.Core.dll" ComponentId="{F6F6C61F-A2DD-4076-9682-56B4BB45C25B}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Printing.v24.1.Core.dll"/>
+    <ROW Component="DevExpress.Sparkline.v24.1.Core.dll" ComponentId="{7F633557-6894-4E56-B6C5-6FF13DE11D0B}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Sparkline.v24.1.Core.dll"/>
+    <ROW Component="DevExpress.Utils.v24.1.dll" ComponentId="{02C08272-BFF4-4A8B-9005-DF45CA731F28}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v24.1.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v24.1.dll" ComponentId="{3990B32A-D5A3-4989-9E34-440CB4C43F57}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraEditors.v24.1.dll"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll" ComponentId="{25F10648-A820-4E12-B2CD-BD66AC2D034F}" Directory_="APPDIR" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll"/>
+    <ROW Component="DocumentFormat.OpenXml.dll" ComponentId="{91E70A77-73A4-4F75-9BBE-F8EEE051CAB6}" Directory_="APPDIR" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll"/>
     <ROW Component="EPPlus.Interfaces.dll" ComponentId="{5A98F028-3942-4D47-AE54-4D850DAED07F}" Directory_="APPDIR" Attributes="0" KeyPath="EPPlus.Interfaces.dll"/>
     <ROW Component="EPPlus.System.Drawing.dll" ComponentId="{18498731-AE8F-453D-A3D4-3D26793E3C1A}" Directory_="APPDIR" Attributes="0" KeyPath="EPPlus.System.Drawing.dll"/>
     <ROW Component="EPPlus.dll" ComponentId="{66890EE5-80C1-4AE7-92B4-B849831DAAA2}" Directory_="APPDIR" Attributes="0" KeyPath="EPPlus.dll"/>
+    <ROW Component="GemBox.Document.dll" ComponentId="{3BDB2A25-5F1C-4CE1-98C5-2BF54B59B628}" Directory_="APPDIR" Attributes="0" KeyPath="GemBox.Document.dll"/>
     <ROW Component="Google.Apis.Auth.dll" ComponentId="{76A3FE31-8DAC-4004-82D7-BA31EBF6EDE5}" Directory_="APPDIR" Attributes="0" KeyPath="Google.Apis.Auth.dll"/>
     <ROW Component="Google.Apis.Core.dll" ComponentId="{B96CE2EE-B045-4DB2-8144-646D23CB73F3}" Directory_="APPDIR" Attributes="0" KeyPath="Google.Apis.Core.dll"/>
     <ROW Component="Google.Apis.Drive.v3.dll" ComponentId="{BFD0170D-ADC9-4972-B3AD-F80CD90A020C}" Directory_="APPDIR" Attributes="0" KeyPath="Google.Apis.Drive.v3.dll"/>
     <ROW Component="Google.Apis.dll" ComponentId="{FBBB6FC3-9A5C-497F-B556-B541109F3752}" Directory_="APPDIR" Attributes="0" KeyPath="Google.Apis.dll"/>
     <ROW Component="Guna.UI2.dll" ComponentId="{DC92E6E1-9F15-49EF-B6CF-86FA183F25EC}" Directory_="APPDIR" Attributes="0" KeyPath="Guna.UI2.dll"/>
+    <ROW Component="HarfBuzzSharp.dll" ComponentId="{2EAF72CE-65F0-401D-8459-19AB3527F60D}" Directory_="APPDIR" Attributes="0" KeyPath="HarfBuzzSharp.dll"/>
     <ROW Component="MailKit.dll" ComponentId="{B34CFDF2-0EC5-4A1E-9881-86D6D481A66C}" Directory_="APPDIR" Attributes="0" KeyPath="MailKit.dll"/>
+    <ROW Component="Microsoft.Bcl.Numerics.dll" ComponentId="{EC4DF49C-102F-4E6D-824C-83A2A01FE219}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Bcl.Numerics.dll"/>
     <ROW Component="Microsoft.CSharp.dll" ComponentId="{1516A858-5608-4DB8-8635-DBDC7C471386}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.CSharp.dll"/>
     <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll" ComponentId="{5BF57948-F498-44DE-8822-467D6F0DC5D5}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll"/>
+    <ROW Component="Microsoft.mshtml.dll" ComponentId="{0D83610E-3567-499B-98E2-F4A53DF239A4}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.mshtml.dll"/>
     <ROW Component="MimeKit.dll" ComponentId="{3CA23605-CD03-4544-A401-74F975FB4338}" Directory_="APPDIR" Attributes="0" KeyPath="MimeKit.dll"/>
     <ROW Component="Newtonsoft.Json.dll" ComponentId="{8C52E853-087B-4B02-B362-E09555756097}" Directory_="APPDIR" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="PdfiumViewer.dll" ComponentId="{DCC3A93B-1895-4717-A2F5-6CE98E909862}" Directory_="APPDIR" Attributes="0" KeyPath="PdfiumViewer.dll"/>
     <ROW Component="PresentationCore.dll" ComponentId="{9980888E-0A47-4E18-A64A-99BDC10BA90C}" Directory_="APPDIR" Attributes="0" KeyPath="PresentationCore.dll"/>
     <ROW Component="ProductInformation" ComponentId="{F33A50CC-DE10-4538-8D2E-B62C75F1A722}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{31B0A73A-4DD4-45FE-A99D-518A23E81B4A}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SkiaSharp.dll" ComponentId="{912004ED-0D6D-44A6-9419-F2A11579A18F}" Directory_="APPDIR" Attributes="0" KeyPath="SkiaSharp.dll"/>
+    <ROW Component="Spire.Doc.dll" ComponentId="{7499DE1A-EC3B-416F-87A2-8890E9E0CC5B}" Directory_="APPDIR" Attributes="0" KeyPath="Spire.Doc.dll"/>
+    <ROW Component="Spire.License.dll" ComponentId="{41E63D23-E79D-4250-B77B-C864585E443A}" Directory_="APPDIR" Attributes="0" KeyPath="Spire.License.dll"/>
+    <ROW Component="Spire.Pdf.dll" ComponentId="{394F58DD-8485-4FE1-A526-D98277C5B9A9}" Directory_="APPDIR" Attributes="0" KeyPath="Spire.Pdf.dll"/>
+    <ROW Component="Spire.PdfViewer.Asp.dll" ComponentId="{09B15B5C-7E5B-4A17-9116-8001ADF9AD3B}" Directory_="APPDIR" Attributes="0" KeyPath="Spire.PdfViewer.Asp.dll"/>
+    <ROW Component="Spire.PdfViewer.Forms.dll" ComponentId="{83DA4583-1697-463E-9C39-9A84B8A50ECA}" Directory_="APPDIR" Attributes="0" KeyPath="Spire.PdfViewer.Forms.dll"/>
     <ROW Component="System.Buffers.dll" ComponentId="{FA4A1D8D-A601-4988-B490-C92BDEC05513}" Directory_="APPDIR" Attributes="0" KeyPath="System.Buffers.dll"/>
     <ROW Component="System.ComponentModel.Annotations.dll" ComponentId="{3D762EEC-6425-4EE4-BD11-FEA4E44B91B0}" Directory_="APPDIR" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll"/>
     <ROW Component="System.ComponentModel.DataAnnotations.dll" ComponentId="{50F1910E-DE6A-4582-9F8D-150B2ABAAB1E}" Directory_="APPDIR" Attributes="0" KeyPath="System.ComponentModel.DataAnnotations.dll"/>
@@ -76,8 +98,13 @@
     <ROW Component="System.Xml.Linq.dll" ComponentId="{302BE970-8E81-48F3-A37C-599A1EE8DF07}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.Linq.dll"/>
     <ROW Component="System.Xml.dll" ComponentId="{DAECD167-82D2-4AE1-B8C8-3851F68241AF}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.dll"/>
     <ROW Component="System.dll" ComponentId="{A49E9E99-3FC7-4B57-A22F-C522BDDD9DAE}" Directory_="APPDIR" Attributes="0" KeyPath="System.dll"/>
+    <ROW Component="Xceed.Document.NET.dll" ComponentId="{A5690730-0C24-4618-AC42-73A189E373E3}" Directory_="APPDIR" Attributes="0" KeyPath="Xceed.Document.NET.dll"/>
+    <ROW Component="Xceed.Drawing.NET.dll" ComponentId="{BBB97320-4BB1-4366-B491-82076D2EC434}" Directory_="APPDIR" Attributes="0" KeyPath="Xceed.Drawing.NET.dll"/>
+    <ROW Component="Xceed.Pdf.dll" ComponentId="{E5DE4DA3-FF23-49EF-9ACB-54346A0705D3}" Directory_="APPDIR" Attributes="0" KeyPath="Xceed.Pdf.dll"/>
+    <ROW Component="Xceed.Words.NET.dll" ComponentId="{C70E8209-1FD9-41C0-8246-E9A2F6A99DFE}" Directory_="APPDIR" Attributes="0" KeyPath="Xceed.Words.NET.dll"/>
     <ROW Component="mscorlib.dll" ComponentId="{08882505-90B2-452F-835B-E1A958605CA8}" Directory_="APPDIR" Attributes="0" KeyPath="mscorlib.dll"/>
     <ROW Component="netstandard.dll" ComponentId="{18CD7186-4674-41B0-AD28-62937B66AEC2}" Directory_="APPDIR" Attributes="0" KeyPath="netstandard.dll"/>
+    <ROW Component="pdfium.dll" ComponentId="{4C27C791-6C58-42FB-B717-C02AF0D7CD20}" Directory_="APPDIR" Attributes="256" KeyPath="pdfium.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -86,85 +113,142 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="System.Security.dll" Component_="System.Security.dll" FileName="SYSTEM~1.DLL|System.Security.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Security.dll" SelfReg="false"/>
     <ROW File="PresentationCore.dll" Component_="PresentationCore.dll" FileName="PRESEN~1.DLL|PresentationCore.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\PresentationCore.dll" SelfReg="false"/>
-    <ROW File="ChiaseNoiBo.exe" Component_="ChiaseNoiBo.exe" FileName="CHIASE~1.EXE|ChiaseNoiBo.exe" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\ChiaseNoiBo.exe" SelfReg="false" DigSign="true"/>
-    <ROW File="MailKit.dll" Component_="MailKit.dll" FileName="MailKit.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MailKit.dll" SelfReg="false"/>
-    <ROW File="ChiaseNoiBo.exe.config" Component_="ChiaseNoiBo.exe.config" FileName="CHIASE~1.CON|ChiaseNoiBo.exe.config" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\ChiaseNoiBo.exe.config" SelfReg="false"/>
+    <ROW File="ChiaseNoiBo.exe" Component_="ChiaseNoiBo.exe" FileName="CHIASE~1.EXE|ChiaseNoiBo.exe" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\ChiaseNoiBo.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="MailKit.dll" Component_="MailKit.dll" FileName="MailKit.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MailKit.dll" SelfReg="false"/>
+    <ROW File="ChiaseNoiBo.exe.config" Component_="ChiaseNoiBo.exe.config" FileName="CHIASE~1.CON|ChiaseNoiBo.exe.config" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\ChiaseNoiBo.exe.config" SelfReg="false"/>
     <ROW File="System.Deployment.dll" Component_="System.Deployment.dll" FileName="SYSTEM~2.DLL|System.Deployment.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Deployment.dll" SelfReg="false"/>
-    <ROW File="BouncyCastle.Crypto.dll" Component_="BouncyCastle.Crypto.dll" FileName="BOUNCY~1.DLL|BouncyCastle.Crypto.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\BouncyCastle.Crypto.dll" SelfReg="false"/>
+    <ROW File="BouncyCastle.Crypto.dll" Component_="BouncyCastle.Crypto.dll" FileName="BOUNCY~1.DLL|BouncyCastle.Crypto.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\BouncyCastle.Crypto.dll" SelfReg="false"/>
     <ROW File="System.Drawing.dll" Component_="System.Drawing.dll" FileName="SYSTEM~3.DLL|System.Drawing.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Drawing.dll" SelfReg="false"/>
     <ROW File="System.Data.dll" Component_="System.Data.dll" FileName="SYSTEM~4.DLL|System.Data.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.dll" SelfReg="false"/>
     <ROW File="System.Configuration.dll" Component_="System.Configuration.dll" FileName="SYSTEM~5.DLL|System.Configuration.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Configuration.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll" Component_="Microsoft.IO.RecyclableMemoryStream.dll" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="BouncyCastle.Cryptography.dll" Component_="BouncyCastle.Cryptography.dll" FileName="BOUNCY~2.DLL|BouncyCastle.Cryptography.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\BouncyCastle.Cryptography.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll" Component_="EPPlus.System.Drawing.dll" FileName="EPPLUS~1.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\EPPlus.System.Drawing.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll" Component_="EPPlus.Interfaces.dll" FileName="EPPLUS~2.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll" Component_="EPPlus.dll" FileName="EPPlus.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\EPPlus.dll" SelfReg="false"/>
-    <ROW File="Google.Apis.Auth.dll" Component_="Google.Apis.Auth.dll" FileName="GOOGLE~1.DLL|Google.Apis.Auth.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Auth.dll" SelfReg="false"/>
-    <ROW File="Google.Apis.Core.dll" Component_="Google.Apis.Core.dll" FileName="GOOGLE~2.DLL|Google.Apis.Core.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Core.dll" SelfReg="false"/>
-    <ROW File="Google.Apis.dll" Component_="Google.Apis.dll" FileName="GOOGLE~3.DLL|Google.Apis.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.dll" SelfReg="false"/>
-    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTEM~6.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
-    <ROW File="Google.Apis.Drive.v3.dll" Component_="Google.Apis.Drive.v3.dll" FileName="GOOGLE~4.DLL|Google.Apis.Drive.v3.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Drive.v3.dll" SelfReg="false"/>
-    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Newtonsoft.Json.dll" SelfReg="false"/>
-    <ROW File="Guna.UI2.dll" Component_="Guna.UI2.dll" FileName="GUNAUI~1.DLL|Guna.UI2.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Guna.UI2.dll" SelfReg="false"/>
+    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll" Component_="Microsoft.IO.RecyclableMemoryStream.dll" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
+    <ROW File="BouncyCastle.Cryptography.dll" Component_="BouncyCastle.Cryptography.dll" FileName="BOUNCY~2.DLL|BouncyCastle.Cryptography.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\BouncyCastle.Cryptography.dll" SelfReg="false"/>
+    <ROW File="EPPlus.System.Drawing.dll" Component_="EPPlus.System.Drawing.dll" FileName="EPPLUS~1.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\EPPlus.System.Drawing.dll" SelfReg="false"/>
+    <ROW File="EPPlus.Interfaces.dll" Component_="EPPlus.Interfaces.dll" FileName="EPPLUS~2.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\EPPlus.Interfaces.dll" SelfReg="false"/>
+    <ROW File="EPPlus.dll" Component_="EPPlus.dll" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\EPPlus.dll" SelfReg="false"/>
+    <ROW File="Google.Apis.Auth.dll" Component_="Google.Apis.Auth.dll" FileName="GOOGLE~1.DLL|Google.Apis.Auth.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Auth.dll" SelfReg="false"/>
+    <ROW File="Google.Apis.Core.dll" Component_="Google.Apis.Core.dll" FileName="GOOGLE~2.DLL|Google.Apis.Core.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Core.dll" SelfReg="false"/>
+    <ROW File="Google.Apis.dll" Component_="Google.Apis.dll" FileName="GOOGLE~3.DLL|Google.Apis.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTEM~6.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="Google.Apis.Drive.v3.dll" Component_="Google.Apis.Drive.v3.dll" FileName="GOOGLE~4.DLL|Google.Apis.Drive.v3.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Drive.v3.dll" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Newtonsoft.Json.dll" SelfReg="false"/>
+    <ROW File="Guna.UI2.dll" Component_="Guna.UI2.dll" FileName="GUNAUI~1.DLL|Guna.UI2.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Guna.UI2.dll" SelfReg="false"/>
     <ROW File="System.ComponentModel.DataAnnotations.dll" Component_="System.ComponentModel.DataAnnotations.dll" FileName="SYSTEM~7.DLL|System.ComponentModel.DataAnnotations.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.ComponentModel.DataAnnotations.dll" SelfReg="false"/>
     <ROW File="Microsoft.CSharp.dll" Component_="Microsoft.CSharp.dll" FileName="MICROS~2.DLL|Microsoft.CSharp.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Microsoft.CSharp.dll" SelfReg="false"/>
-    <ROW File="MimeKit.dll" Component_="MimeKit.dll" FileName="MimeKit.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MimeKit.dll" SelfReg="false"/>
+    <ROW File="MimeKit.dll" Component_="MimeKit.dll" FileName="MimeKit.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MimeKit.dll" SelfReg="false"/>
     <ROW File="netstandard.dll" Component_="netstandard.dll" FileName="NETSTA~1.DLL|netstandard.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\Facades\netstandard.dll" SelfReg="false"/>
-    <ROW File="System.Formats.Asn1.dll" Component_="System.Formats.Asn1.dll" FileName="SYSTEM~8.DLL|System.Formats.Asn1.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Formats.Asn1.dll" SelfReg="false"/>
+    <ROW File="System.Formats.Asn1.dll" Component_="System.Formats.Asn1.dll" FileName="SYSTEM~8.DLL|System.Formats.Asn1.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Formats.Asn1.dll" SelfReg="false"/>
     <ROW File="mscorlib.dll" Component_="mscorlib.dll" FileName="mscorlib.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\mscorlib.dll" SelfReg="false"/>
-    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTEM~9.DLL|System.ValueTuple.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.ValueTuple.dll" SelfReg="false"/>
-    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTE~10.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Buffers.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll" Component_="System.ComponentModel.Annotations.dll" FileName="SYSTE~11.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.ComponentModel.Annotations.dll" SelfReg="false"/>
+    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTEM~9.DLL|System.ValueTuple.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.ValueTuple.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTE~10.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Annotations.dll" Component_="System.ComponentModel.Annotations.dll" FileName="SYSTE~11.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.ComponentModel.Annotations.dll" SelfReg="false"/>
     <ROW File="System.Core.dll" Component_="System.Core.dll" FileName="SYSTE~12.DLL|System.Core.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Core.dll" SelfReg="false"/>
     <ROW File="System.Data.DataSetExtensions.dll" Component_="System.Data.DataSetExtensions.dll" FileName="SYSTE~13.DLL|System.Data.DataSetExtensions.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.DataSetExtensions.dll" SelfReg="false"/>
     <ROW File="System.Design.dll" Component_="System.Design.dll" FileName="SYSTE~14.DLL|System.Design.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Design.dll" SelfReg="false"/>
     <ROW File="System.dll" Component_="System.dll" FileName="System.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll" SelfReg="false"/>
     <ROW File="System.Management.dll" Component_="System.Management.dll" FileName="SYSTE~15.DLL|System.Management.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Management.dll" SelfReg="false"/>
-    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTE~16.DLL|System.Memory.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTE~16.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Memory.dll" SelfReg="false"/>
     <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTE~17.DLL|System.Net.Http.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Net.Http.dll" SelfReg="false"/>
     <ROW File="System.Numerics.dll" Component_="System.Numerics.dll" FileName="SYSTE~18.DLL|System.Numerics.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Numerics.dll" SelfReg="false"/>
-    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTE~19.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Numerics.Vectors.dll" SelfReg="false"/>
-    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="System.Threading.Tasks.Extensions.dll" FileName="SYSTE~20.DLL|System.Threading.Tasks.Extensions.dll" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Threading.Tasks.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTE~19.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="System.Threading.Tasks.Extensions.dll" FileName="SYSTE~20.DLL|System.Threading.Tasks.Extensions.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Threading.Tasks.Extensions.dll" SelfReg="false"/>
     <ROW File="System.Web.dll" Component_="System.Web.dll" FileName="SYSTE~21.DLL|System.Web.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Web.dll" SelfReg="false"/>
     <ROW File="System.Windows.Forms.dll" Component_="System.Windows.Forms.dll" FileName="SYSTE~22.DLL|System.Windows.Forms.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll" SelfReg="false"/>
     <ROW File="System.Xml.dll" Component_="System.Xml.dll" FileName="SYSTE~23.DLL|System.Xml.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.dll" SelfReg="false"/>
     <ROW File="System.Xml.Linq.dll" Component_="System.Xml.Linq.dll" FileName="SYSTE~24.DLL|System.Xml.Linq.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.Linq.dll" SelfReg="false"/>
     <ROW File="System.Runtime.Serialization.dll" Component_="System.Runtime.Serialization.dll" FileName="SYSTE~25.DLL|System.Runtime.Serialization.dll" Attributes="0" SourcePath="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Runtime.Serialization.dll" SelfReg="false"/>
-    <ROW File="ChiaseNoiBo.pdb" Component_="ChiaseNoiBo.exe" FileName="CHIASE~1.PDB|ChiaseNoiBo.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\ChiaseNoiBo.pdb" SelfReg="false"/>
-    <ROW File="BouncyCastle.Crypto.xml" Component_="ChiaseNoiBo.exe.config" FileName="BOUNCY~1.XML|BouncyCastle.Crypto.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\BouncyCastle.Crypto.xml" SelfReg="false"/>
-    <ROW File="BouncyCastle.Cryptography.xml" Component_="ChiaseNoiBo.exe.config" FileName="BOUNCY~2.XML|BouncyCastle.Cryptography.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\BouncyCastle.Cryptography.xml" SelfReg="false"/>
-    <ROW File="credentials.json" Component_="ChiaseNoiBo.exe.config" FileName="CREDEN~1.JSO|credentials.json" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\credentials.json" SelfReg="false"/>
-    <ROW File="DanhSachTaiKhoan.xlsx" Component_="ChiaseNoiBo.exe.config" FileName="DANHSA~1.XLS|DanhSachTaiKhoan.xlsx" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\DanhSachTaiKhoan.xlsx" SelfReg="false"/>
-    <ROW File="EPPlus.xml" Component_="ChiaseNoiBo.exe.config" FileName="EPPlus.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\EPPlus.xml" SelfReg="false"/>
-    <ROW File="Google.Apis.Auth.pdb" Component_="Google.Apis.Auth.dll" FileName="GOOGLE~1.PDB|Google.Apis.Auth.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Auth.pdb" SelfReg="false"/>
-    <ROW File="Google.Apis.Auth.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~1.XML|Google.Apis.Auth.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Auth.xml" SelfReg="false"/>
-    <ROW File="Google.Apis.Core.pdb" Component_="Google.Apis.Core.dll" FileName="GOOGLE~2.PDB|Google.Apis.Core.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Core.pdb" SelfReg="false"/>
-    <ROW File="Google.Apis.Core.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~2.XML|Google.Apis.Core.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Core.xml" SelfReg="false"/>
-    <ROW File="Google.Apis.Drive.v3.pdb" Component_="Google.Apis.Drive.v3.dll" FileName="GOOGLE~3.PDB|Google.Apis.Drive.v3.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Drive.v3.pdb" SelfReg="false"/>
-    <ROW File="Google.Apis.Drive.v3.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~3.XML|Google.Apis.Drive.v3.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.Drive.v3.xml" SelfReg="false"/>
-    <ROW File="Google.Apis.pdb" Component_="Google.Apis.dll" FileName="GOOGLE~4.PDB|Google.Apis.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.pdb" SelfReg="false"/>
-    <ROW File="Google.Apis.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~4.XML|Google.Apis.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Google.Apis.xml" SelfReg="false"/>
-    <ROW File="MailKit.pdb" Component_="MailKit.dll" FileName="MailKit.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MailKit.pdb" SelfReg="false"/>
-    <ROW File="MailKit.xml" Component_="ChiaseNoiBo.exe.config" FileName="MailKit.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MailKit.xml" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.xml" Component_="ChiaseNoiBo.exe.config" FileName="MICROS~1.XML|Microsoft.IO.RecyclableMemoryStream.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Microsoft.IO.RecyclableMemoryStream.xml" SelfReg="false"/>
-    <ROW File="MimeKit.dll.config" Component_="ChiaseNoiBo.exe.config" FileName="MIMEKI~1.CON|MimeKit.dll.config" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MimeKit.dll.config" SelfReg="false"/>
-    <ROW File="MimeKit.pdb" Component_="MimeKit.dll" FileName="MimeKit.pdb" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MimeKit.pdb" SelfReg="false"/>
-    <ROW File="MimeKit.xml" Component_="ChiaseNoiBo.exe.config" FileName="MimeKit.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\MimeKit.xml" SelfReg="false"/>
-    <ROW File="Newtonsoft.Json.xml" Component_="ChiaseNoiBo.exe.config" FileName="NEWTON~1.XML|Newtonsoft.Json.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\Newtonsoft.Json.xml" SelfReg="false"/>
-    <ROW File="System.Buffers.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~1.XML|System.Buffers.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Buffers.xml" SelfReg="false"/>
-    <ROW File="System.Formats.Asn1.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~2.XML|System.Formats.Asn1.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Formats.Asn1.xml" SelfReg="false"/>
-    <ROW File="System.Memory.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~3.XML|System.Memory.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Memory.xml" SelfReg="false"/>
-    <ROW File="System.Numerics.Vectors.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~4.XML|System.Numerics.Vectors.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Numerics.Vectors.xml" SelfReg="false"/>
-    <ROW File="System.Runtime.CompilerServices.Unsafe.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~5.XML|System.Runtime.CompilerServices.Unsafe.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Runtime.CompilerServices.Unsafe.xml" SelfReg="false"/>
-    <ROW File="System.Threading.Tasks.Extensions.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~6.XML|System.Threading.Tasks.Extensions.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.Threading.Tasks.Extensions.xml" SelfReg="false"/>
-    <ROW File="System.ValueTuple.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~7.XML|System.ValueTuple.xml" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\System.ValueTuple.xml" SelfReg="false"/>
-    <ROW File="DanhSachTaiKhoan.csv" Component_="ChiaseNoiBo.exe.config" FileName="DANHSA~1.CSV|DanhSachTaiKhoan.csv" Attributes="0" SourcePath="..\..\ConfuserHandle\Confused\DanhSachTaiKhoan.csv" SelfReg="false"/>
+    <ROW File="ChiaseNoiBo.pdb" Component_="ChiaseNoiBo.exe" FileName="CHIASE~1.PDB|ChiaseNoiBo.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\ChiaseNoiBo.pdb" SelfReg="false"/>
+    <ROW File="BouncyCastle.Crypto.xml" Component_="ChiaseNoiBo.exe.config" FileName="BOUNCY~1.XML|BouncyCastle.Crypto.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\BouncyCastle.Crypto.xml" SelfReg="false"/>
+    <ROW File="BouncyCastle.Cryptography.xml" Component_="ChiaseNoiBo.exe.config" FileName="BOUNCY~2.XML|BouncyCastle.Cryptography.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\BouncyCastle.Cryptography.xml" SelfReg="false"/>
+    <ROW File="credentials.json" Component_="ChiaseNoiBo.exe.config" FileName="CREDEN~1.JSO|credentials.json" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\credentials.json" SelfReg="false"/>
+    <ROW File="DanhSachTaiKhoan.xlsx" Component_="ChiaseNoiBo.exe.config" FileName="DANHSA~1.XLS|DanhSachTaiKhoan.xlsx" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DanhSachTaiKhoan.xlsx" SelfReg="false"/>
+    <ROW File="EPPlus.xml" Component_="ChiaseNoiBo.exe.config" FileName="EPPlus.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\EPPlus.xml" SelfReg="false"/>
+    <ROW File="Google.Apis.Auth.pdb" Component_="Google.Apis.Auth.dll" FileName="GOOGLE~1.PDB|Google.Apis.Auth.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Auth.pdb" SelfReg="false"/>
+    <ROW File="Google.Apis.Auth.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~1.XML|Google.Apis.Auth.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Auth.xml" SelfReg="false"/>
+    <ROW File="Google.Apis.Core.pdb" Component_="Google.Apis.Core.dll" FileName="GOOGLE~2.PDB|Google.Apis.Core.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Core.pdb" SelfReg="false"/>
+    <ROW File="Google.Apis.Core.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~2.XML|Google.Apis.Core.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Core.xml" SelfReg="false"/>
+    <ROW File="Google.Apis.Drive.v3.pdb" Component_="Google.Apis.Drive.v3.dll" FileName="GOOGLE~3.PDB|Google.Apis.Drive.v3.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Drive.v3.pdb" SelfReg="false"/>
+    <ROW File="Google.Apis.Drive.v3.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~3.XML|Google.Apis.Drive.v3.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.Drive.v3.xml" SelfReg="false"/>
+    <ROW File="Google.Apis.pdb" Component_="Google.Apis.dll" FileName="GOOGLE~4.PDB|Google.Apis.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.pdb" SelfReg="false"/>
+    <ROW File="Google.Apis.xml" Component_="ChiaseNoiBo.exe.config" FileName="GOOGLE~4.XML|Google.Apis.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Google.Apis.xml" SelfReg="false"/>
+    <ROW File="MailKit.pdb" Component_="MailKit.dll" FileName="MailKit.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MailKit.pdb" SelfReg="false"/>
+    <ROW File="MailKit.xml" Component_="ChiaseNoiBo.exe.config" FileName="MailKit.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MailKit.xml" SelfReg="false"/>
+    <ROW File="Microsoft.IO.RecyclableMemoryStream.xml" Component_="ChiaseNoiBo.exe.config" FileName="MICROS~1.XML|Microsoft.IO.RecyclableMemoryStream.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml" SelfReg="false"/>
+    <ROW File="MimeKit.dll.config" Component_="ChiaseNoiBo.exe.config" FileName="MIMEKI~1.CON|MimeKit.dll.config" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MimeKit.dll.config" SelfReg="false"/>
+    <ROW File="MimeKit.pdb" Component_="MimeKit.dll" FileName="MimeKit.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MimeKit.pdb" SelfReg="false"/>
+    <ROW File="MimeKit.xml" Component_="ChiaseNoiBo.exe.config" FileName="MimeKit.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\MimeKit.xml" SelfReg="false"/>
+    <ROW File="Newtonsoft.Json.xml" Component_="ChiaseNoiBo.exe.config" FileName="NEWTON~1.XML|Newtonsoft.Json.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Newtonsoft.Json.xml" SelfReg="false"/>
+    <ROW File="System.Buffers.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~1.XML|System.Buffers.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Buffers.xml" SelfReg="false"/>
+    <ROW File="System.Formats.Asn1.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~2.XML|System.Formats.Asn1.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Formats.Asn1.xml" SelfReg="false"/>
+    <ROW File="System.Memory.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~3.XML|System.Memory.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Memory.xml" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~4.XML|System.Numerics.Vectors.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Numerics.Vectors.xml" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~5.XML|System.Runtime.CompilerServices.Unsafe.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Extensions.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~6.XML|System.Threading.Tasks.Extensions.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.Threading.Tasks.Extensions.xml" SelfReg="false"/>
+    <ROW File="System.ValueTuple.xml" Component_="ChiaseNoiBo.exe.config" FileName="SYSTEM~7.XML|System.ValueTuple.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\System.ValueTuple.xml" SelfReg="false"/>
+    <ROW File="DanhSachTaiKhoan.csv" Component_="ChiaseNoiBo.exe.config" FileName="DANHSA~1.CSV|DanhSachTaiKhoan.csv" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DanhSachTaiKhoan.csv" SelfReg="false"/>
+    <ROW File="chiasenoibo_25032025v9.msi" Component_="ChiaseNoiBo.exe.config" FileName="CHIASE~1.MSI|chiasenoibo_25032025v9.msi" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\chiasenoibo_25032025v9.msi" SelfReg="false"/>
+    <ROW File="DevExpress.Data.Desktop.v24.1.dll" Component_="DevExpress.Data.Desktop.v24.1.dll" FileName="DEVEXP~1.DLL|DevExpress.Data.Desktop.v24.1.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Data.Desktop.v24.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.Desktop.v24.1.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~1.XML|DevExpress.Data.Desktop.v24.1.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Data.Desktop.v24.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v24.1.dll" Component_="DevExpress.Data.v24.1.dll" FileName="DEVEXP~2.DLL|DevExpress.Data.v24.1.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Data.v24.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v24.1.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~2.XML|DevExpress.Data.v24.1.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Data.v24.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Drawing.v24.1.dll" Component_="DevExpress.Drawing.v24.1.dll" FileName="DEVEXP~3.DLL|DevExpress.Drawing.v24.1.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Drawing.v24.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Drawing.v24.1.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~3.XML|DevExpress.Drawing.v24.1.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Drawing.v24.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v24.1.Core.dll" Component_="DevExpress.Pdf.v24.1.Core.dll" FileName="DEVEXP~4.DLL|DevExpress.Pdf.v24.1.Core.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Pdf.v24.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v24.1.Core.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~4.XML|DevExpress.Pdf.v24.1.Core.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Pdf.v24.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v24.1.Drawing.dll" Component_="DevExpress.Pdf.v24.1.Drawing.dll" FileName="DEVEXP~5.DLL|DevExpress.Pdf.v24.1.Drawing.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Pdf.v24.1.Drawing.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v24.1.Drawing.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~5.XML|DevExpress.Pdf.v24.1.Drawing.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Pdf.v24.1.Drawing.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v24.1.Core.dll" Component_="DevExpress.Printing.v24.1.Core.dll" FileName="DEVEXP~6.DLL|DevExpress.Printing.v24.1.Core.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Printing.v24.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v24.1.Core.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~6.XML|DevExpress.Printing.v24.1.Core.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Printing.v24.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v24.1.Core.dll" Component_="DevExpress.Sparkline.v24.1.Core.dll" FileName="DEVEXP~7.DLL|DevExpress.Sparkline.v24.1.Core.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Sparkline.v24.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v24.1.Core.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~7.XML|DevExpress.Sparkline.v24.1.Core.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Sparkline.v24.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v24.1.dll" Component_="DevExpress.Utils.v24.1.dll" FileName="DEVEXP~8.DLL|DevExpress.Utils.v24.1.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Utils.v24.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v24.1.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~8.XML|DevExpress.Utils.v24.1.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.Utils.v24.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v24.1.dll" Component_="DevExpress.XtraEditors.v24.1.dll" FileName="DEVEXP~9.DLL|DevExpress.XtraEditors.v24.1.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.XtraEditors.v24.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v24.1.xml" Component_="ChiaseNoiBo.exe.config" FileName="DEVEXP~9.XML|DevExpress.XtraEditors.v24.1.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DevExpress.XtraEditors.v24.1.xml" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll" Component_="DocumentFormat.OpenXml.dll" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll" Component_="DocumentFormat.OpenXml.Framework.dll" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.xml" Component_="ChiaseNoiBo.exe.config" FileName="DOCUME~1.XML|DocumentFormat.OpenXml.Framework.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.Framework.xml" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.xml" Component_="ChiaseNoiBo.exe.config" FileName="DOCUME~2.XML|DocumentFormat.OpenXml.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\DocumentFormat.OpenXml.xml" SelfReg="false"/>
+    <ROW File="GemBox.Document.dll" Component_="GemBox.Document.dll" FileName="GEMBOX~1.DLL|GemBox.Document.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\GemBox.Document.dll" SelfReg="false"/>
+    <ROW File="GemBox.Document.xml" Component_="ChiaseNoiBo.exe.config" FileName="GEMBOX~1.XML|GemBox.Document.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\GemBox.Document.xml" SelfReg="false"/>
+    <ROW File="HarfBuzzSharp.dll" Component_="HarfBuzzSharp.dll" FileName="HARFBU~1.DLL|HarfBuzzSharp.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\HarfBuzzSharp.dll" SelfReg="false"/>
+    <ROW File="HarfBuzzSharp.pdb" Component_="HarfBuzzSharp.dll" FileName="HARFBU~1.PDB|HarfBuzzSharp.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\HarfBuzzSharp.pdb" SelfReg="false"/>
+    <ROW File="HarfBuzzSharp.xml" Component_="ChiaseNoiBo.exe.config" FileName="HARFBU~1.XML|HarfBuzzSharp.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\HarfBuzzSharp.xml" SelfReg="false"/>
+    <ROW File="libHarfBuzzSharp.dylib" Component_="ChiaseNoiBo.exe.config" FileName="LIBHAR~1.DYL|libHarfBuzzSharp.dylib" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\libHarfBuzzSharp.dylib" SelfReg="false"/>
+    <ROW File="libSkiaSharp.dylib" Component_="ChiaseNoiBo.exe.config" FileName="LIBSKI~1.DYL|libSkiaSharp.dylib" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\libSkiaSharp.dylib" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.Numerics.dll" Component_="Microsoft.Bcl.Numerics.dll" FileName="MICROS~3.DLL|Microsoft.Bcl.Numerics.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Microsoft.Bcl.Numerics.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.Numerics.xml" Component_="ChiaseNoiBo.exe.config" FileName="MICROS~2.XML|Microsoft.Bcl.Numerics.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Microsoft.Bcl.Numerics.xml" SelfReg="false"/>
+    <ROW File="Microsoft.mshtml.dll" Component_="Microsoft.mshtml.dll" FileName="MICROS~4.DLL|Microsoft.mshtml.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Microsoft.mshtml.dll" SelfReg="false"/>
+    <ROW File="pdfium.dll" Component_="pdfium.dll" FileName="pdfium.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\pdfium.dll" SelfReg="false"/>
+    <ROW File="PdfiumViewer.dll" Component_="PdfiumViewer.dll" FileName="PDFIUM~1.DLL|PdfiumViewer.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\PdfiumViewer.dll" SelfReg="false"/>
+    <ROW File="PdfiumViewer.xml" Component_="ChiaseNoiBo.exe.config" FileName="PDFIUM~1.XML|PdfiumViewer.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\PdfiumViewer.xml" SelfReg="false"/>
+    <ROW File="SkiaSharp.dll" Component_="SkiaSharp.dll" FileName="SKIASH~1.DLL|SkiaSharp.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\SkiaSharp.dll" SelfReg="false"/>
+    <ROW File="SkiaSharp.pdb" Component_="SkiaSharp.dll" FileName="SKIASH~1.PDB|SkiaSharp.pdb" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\SkiaSharp.pdb" SelfReg="false"/>
+    <ROW File="SkiaSharp.xml" Component_="ChiaseNoiBo.exe.config" FileName="SKIASH~1.XML|SkiaSharp.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\SkiaSharp.xml" SelfReg="false"/>
+    <ROW File="Spire.Doc.dll" Component_="Spire.Doc.dll" FileName="SPIRED~1.DLL|Spire.Doc.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.Doc.dll" SelfReg="false"/>
+    <ROW File="Spire.Doc.xml" Component_="ChiaseNoiBo.exe.config" FileName="SPIRED~1.XML|Spire.Doc.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.Doc.xml" SelfReg="false"/>
+    <ROW File="Spire.License.dll" Component_="Spire.License.dll" FileName="SPIREL~1.DLL|Spire.License.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.License.dll" SelfReg="false"/>
+    <ROW File="Spire.License.xml" Component_="ChiaseNoiBo.exe.config" FileName="SPIREL~1.XML|Spire.License.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.License.xml" SelfReg="false"/>
+    <ROW File="Spire.Pdf.dll" Component_="Spire.Pdf.dll" FileName="SPIREP~1.DLL|Spire.Pdf.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.Pdf.dll" SelfReg="false"/>
+    <ROW File="Spire.Pdf.xml" Component_="ChiaseNoiBo.exe.config" FileName="SPIREP~1.XML|Spire.Pdf.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.Pdf.xml" SelfReg="false"/>
+    <ROW File="Spire.PdfViewer.Asp.dll" Component_="Spire.PdfViewer.Asp.dll" FileName="SPIREP~2.DLL|Spire.PdfViewer.Asp.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.PdfViewer.Asp.dll" SelfReg="false"/>
+    <ROW File="Spire.PdfViewer.Asp.xml" Component_="ChiaseNoiBo.exe.config" FileName="SPIREP~2.XML|Spire.PdfViewer.Asp.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.PdfViewer.Asp.xml" SelfReg="false"/>
+    <ROW File="Spire.PdfViewer.Forms.dll" Component_="Spire.PdfViewer.Forms.dll" FileName="SPIREP~3.DLL|Spire.PdfViewer.Forms.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.PdfViewer.Forms.dll" SelfReg="false"/>
+    <ROW File="Spire.PdfViewer.Forms.xml" Component_="ChiaseNoiBo.exe.config" FileName="SPIREP~3.XML|Spire.PdfViewer.Forms.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Spire.PdfViewer.Forms.xml" SelfReg="false"/>
+    <ROW File="sync_log.txt" Component_="ChiaseNoiBo.exe.config" FileName="sync_log.txt" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\sync_log.txt" SelfReg="false"/>
+    <ROW File="Xceed.Document.NET.dll" Component_="Xceed.Document.NET.dll" FileName="XCEEDD~1.DLL|Xceed.Document.NET.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Document.NET.dll" SelfReg="false"/>
+    <ROW File="Xceed.Document.NET.xml" Component_="ChiaseNoiBo.exe.config" FileName="XCEEDD~1.XML|Xceed.Document.NET.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Document.NET.xml" SelfReg="false"/>
+    <ROW File="Xceed.Drawing.NET.dll" Component_="Xceed.Drawing.NET.dll" FileName="XCEEDD~2.DLL|Xceed.Drawing.NET.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Drawing.NET.dll" SelfReg="false"/>
+    <ROW File="Xceed.Drawing.NET.xml" Component_="ChiaseNoiBo.exe.config" FileName="XCEEDD~2.XML|Xceed.Drawing.NET.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Drawing.NET.xml" SelfReg="false"/>
+    <ROW File="Xceed.Pdf.dll" Component_="Xceed.Pdf.dll" FileName="XCEEDP~1.DLL|Xceed.Pdf.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Pdf.dll" SelfReg="false"/>
+    <ROW File="Xceed.Words.NET.dll" Component_="Xceed.Words.NET.dll" FileName="XCEEDW~1.DLL|Xceed.Words.NET.dll" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Words.NET.dll" SelfReg="false"/>
+    <ROW File="Xceed.Words.NET.xml" Component_="ChiaseNoiBo.exe.config" FileName="XCEEDW~1.XML|Xceed.Words.NET.xml" Attributes="0" SourcePath="..\ChiaseNoiBo\bin\Debug\Xceed.Words.NET.xml" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="AnyCPU_Debug" BuildName="AnyCPU_Debug" BuildOrder="1" BuildType="0" PackageFolder="C:\Users\ASUS\My Drive\UpdateSystem_DatLichKhamBenhnew" PackageFileName="chiasenoibo_25032025v9" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+    <ROW BuildKey="AnyCPU_Debug" BuildName="AnyCPU_Debug" BuildOrder="1" BuildType="0" PackageFolder="C:\Users\ASUS\My Drive\UpdateSystem_DatLichKhamBenhnew" PackageFileName="MyApp_chiasenoibo_05052025v13" Languages="en" InstallationType="4" UseLargeSchema="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
@@ -280,6 +364,33 @@
     <ROW Feature_="MainFeature" Component_="System.Xml.Linq.dll"/>
     <ROW Feature_="MainFeature" Component_="System.Runtime.Serialization.dll"/>
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.Desktop.v24.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v24.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Drawing.v24.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v24.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v24.1.Drawing.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v24.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v24.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v24.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v24.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll"/>
+    <ROW Feature_="MainFeature" Component_="GemBox.Document.dll"/>
+    <ROW Feature_="MainFeature" Component_="HarfBuzzSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.Numerics.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.mshtml.dll"/>
+    <ROW Feature_="MainFeature" Component_="pdfium.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfiumViewer.dll"/>
+    <ROW Feature_="MainFeature" Component_="SkiaSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="Spire.Doc.dll"/>
+    <ROW Feature_="MainFeature" Component_="Spire.License.dll"/>
+    <ROW Feature_="MainFeature" Component_="Spire.Pdf.dll"/>
+    <ROW Feature_="MainFeature" Component_="Spire.PdfViewer.Asp.dll"/>
+    <ROW Feature_="MainFeature" Component_="Spire.PdfViewer.Forms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Xceed.Document.NET.dll"/>
+    <ROW Feature_="MainFeature" Component_="Xceed.Drawing.NET.dll"/>
+    <ROW Feature_="MainFeature" Component_="Xceed.Pdf.dll"/>
+    <ROW Feature_="MainFeature" Component_="Xceed.Words.NET.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="ChiaseNoiBo.exe" SourcePath="C:\Users\ASUS\Downloads\icons8-share-96.ico" Index="0"/>

@@ -219,6 +219,7 @@ namespace ChiaseNoiBo
             this.guna2NumericUpDown1_hientai.Name = "guna2NumericUpDown1_hientai";
             this.guna2NumericUpDown1_hientai.Size = new System.Drawing.Size(328, 30);
             this.guna2NumericUpDown1_hientai.TabIndex = 5;
+            this.guna2NumericUpDown1_hientai.UpDownButtonFillColor = System.Drawing.Color.DeepSkyBlue;
             // 
             // row2Panel
             // 
@@ -305,6 +306,7 @@ namespace ChiaseNoiBo
             this.guna2NumericUpDown2_mongmuon.Name = "guna2NumericUpDown2_mongmuon";
             this.guna2NumericUpDown2_mongmuon.Size = new System.Drawing.Size(328, 16);
             this.guna2NumericUpDown2_mongmuon.TabIndex = 5;
+            this.guna2NumericUpDown2_mongmuon.UpDownButtonFillColor = System.Drawing.Color.DeepSkyBlue;
             // 
             // row3Panel
             // 
@@ -403,6 +405,7 @@ namespace ChiaseNoiBo
             this.guna2Button1_huy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1_huy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1_huy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1_huy.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2Button1_huy.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1_huy.ForeColor = System.Drawing.Color.White;
             this.guna2Button1_huy.Location = new System.Drawing.Point(300, 50);
@@ -419,6 +422,7 @@ namespace ChiaseNoiBo
             this.guna2Button2_luu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2_luu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2_luu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2_luu.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2Button2_luu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2_luu.ForeColor = System.Drawing.Color.White;
             this.guna2Button2_luu.Location = new System.Drawing.Point(528, 50);

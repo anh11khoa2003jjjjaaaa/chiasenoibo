@@ -15,6 +15,8 @@ namespace ChiaseNoiBo
         public Login()
         {
             InitializeComponent();
+            txt_password.UseSystemPasswordChar = true; // Ẩn pass ngay từ đầu
+            guna2PictureBox1.Image = Properties.Resources.hidden; // Con mắt đóng
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -148,6 +150,21 @@ namespace ChiaseNoiBo
         {
             Register register = new Register();
             register.Show();
+            this.Hide();
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            txt_password.UseSystemPasswordChar = !txt_password.UseSystemPasswordChar;
+            guna2PictureBox1.Image = txt_password.UseSystemPasswordChar
+                ? Properties.Resources.hidden
+                : Properties.Resources.eye;
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            ForgotPassword formForgot= new ForgotPassword();
+            formForgot.Show();
             this.Hide();
         }
     }

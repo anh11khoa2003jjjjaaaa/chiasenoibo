@@ -22,7 +22,7 @@ namespace ChiaseNoiBo
             //CultureInfo viCulture = new CultureInfo("vi-VN");
             //Thread.CurrentThread.CurrentCulture = viCulture;
             //Thread.CurrentThread.CurrentUICulture = viCulture;
-            Application.Run(new Login());
+            Application.Run(new Home1());
         }
     }
 }

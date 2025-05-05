@@ -21,12 +21,19 @@ namespace ChiaseNoiBo
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog12;
         private string excelusername;
         private readonly UserControl_LoadFile userControl_LoadFile;
+        private readonly HuongDanSuDungControl huongDanSuDungControl;
+       
         public Home1()
         {
             InitializeComponent();
             guna2MessageDialog12 = new Guna.UI2.WinForms.Guna2MessageDialog();
             guna2MessageDialog12.Parent = this;
+
             userControl_LoadFile = new UserControl_LoadFile();
+          
+
+            // Khởi tạo label hiển thị trạng thái
+
 
         }
         public Home1(string excelusername)
@@ -36,6 +43,8 @@ namespace ChiaseNoiBo
             guna2MessageDialog12 = new Guna.UI2.WinForms.Guna2MessageDialog();
             guna2MessageDialog12.Parent = this;
             userControl_LoadFile = new UserControl_LoadFile();
+
+            // Khởi tạo label hiển thị trạng thái
 
         }
         public void LoadUserControl(UserControl uc)
@@ -49,7 +58,7 @@ namespace ChiaseNoiBo
         {
 
             label2.Text = excelusername;
-
+           LoadUserControl(new HuongDanSuDungControl());
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -158,7 +167,7 @@ namespace ChiaseNoiBo
                 guna2MessageDialog1.Show($"Hệ thống đã có phiên bản mới! Vui lòng cập nhật để trải nghiệm chức năng mới nhất!");
 
                 // Bắt đầu tải file
-                string latestMsiFileName = await userControl_LoadFile.GetLatestMsiFileName(service, GoogleDriveUpdater.FolderId);
+                string latestMsiFileName = await userControl_LoadFile.GetMsiFileName(service, GoogleDriveUpdater.FolderId);
                 if (string.IsNullOrEmpty(latestMsiFileName))
                 {
                     guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
@@ -196,6 +205,14 @@ namespace ChiaseNoiBo
                 //_updateCancellationTokenSource?.Cancel();
                 //CleanupUpdateStatusUI();
             }
+        }
+
+
+
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            LoadUserControl(new HuongDanSuDungControl());
         }
     }
     }

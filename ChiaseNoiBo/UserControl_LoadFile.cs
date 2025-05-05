@@ -132,8 +132,26 @@ namespace ChiaseNoiBo
 
                         using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                         {
-                            saveFileDialog.FileName = driveFile.Name;
+                            // Lấy tên gốc và đuôi file
+                            string originalName = Path.GetFileNameWithoutExtension(driveFile.Name);
+                            string extension = Path.GetExtension(driveFile.Name);
+
+                            // Gợi ý lưu tại thư mục Documents
+                            string folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                            // Tạo tên gợi ý: Tên_1, Tên_2, ...
+                            int index = 1;
+                            string suggestedName;
+                            do
+                            {
+                                suggestedName = $"{originalName}_{index}{extension}";
+                                index++;
+                            } while (File.Exists(Path.Combine(folder, suggestedName)));
+
+                            saveFileDialog.InitialDirectory = folder;
+                            saveFileDialog.FileName = suggestedName;
                             saveFileDialog.Filter = "Excel Files|*.xlsx;*.xls|CSV Files|*.csv|All Files|*.*";
+
                             if (saveFileDialog.ShowDialog() == DialogResult.OK)
                             {
                                 try
@@ -142,22 +160,34 @@ namespace ChiaseNoiBo
                                     var stream = new MemoryStream();
                                     await requestDownload.DownloadAsync(stream);
 
-                                    // Lưu file
-                                    File.WriteAllBytes(saveFileDialog.FileName, stream.ToArray());
+                                    // Sau khi người dùng chọn tên, vẫn kiểm tra trùng để thêm hậu tố nếu cần
+                                    string selectedPath = Path.GetDirectoryName(saveFileDialog.FileName);
+                                    string fileNameWithoutExt = Path.GetFileNameWithoutExtension(saveFileDialog.FileName);
+                                    string fileExt = Path.GetExtension(saveFileDialog.FileName);
+
+                                    string finalPath = Path.Combine(selectedPath, fileNameWithoutExt + fileExt);
+                                    int conflictIndex = 1;
+
+                                    while (File.Exists(finalPath))
+                                    {
+                                        finalPath = Path.Combine(selectedPath, $"{fileNameWithoutExt}_{conflictIndex}{fileExt}");
+                                        conflictIndex++;
+                                    }
+
+                                    File.WriteAllBytes(finalPath, stream.ToArray());
 
                                     guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
                                     guna2MessageDialog1.Show("Tải file thành công!", "Thông báo");
-
                                 }
                                 catch (Exception ex)
                                 {
                                     guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                                    guna2MessageDialog1.Show(ex.Message, "Thông báo");
-                                   
+                                    guna2MessageDialog1.Show(ex.Message, "Lỗi");
                                 }
                             }
                         }
                     };
+
 
                     // Thêm vào panel
                     filePanel.Controls.Add(fileLabel);
@@ -201,26 +231,102 @@ namespace ChiaseNoiBo
                 }
 
                 flowLayoutPanel1.Controls.Clear(); // Xóa danh sách cũ
-
                 foreach (var file in result.Files)
                 {
-                    Button fileButton = new Button
+                    // Panel chứa mỗi file
+                    var filePanel = new Panel
                     {
-                        Text = file.Name,
-                        Tag = file.Id,
                         Width = flowLayoutPanel1.ClientSize.Width - 25,
                         Height = 50,
-                        BackColor = System.Drawing.Color.WhiteSmoke,
-                        FlatStyle = FlatStyle.Flat,
-                        TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
-                        Padding = new Padding(0, 5, 10, 5),
-                        Font = new Font("Segoe UI", 12, FontStyle.Regular),
-                        Margin = new Padding(5, 5, 5, 5)
+                        BackColor = Color.WhiteSmoke,
+                        Margin = new Padding(5),
+                        Padding = new Padding(5),
+                        Tag = file.Id
                     };
 
-                    fileButton.FlatAppearance.BorderSize = 0;
-                    fileButton.Click += FileButton_Click; // Xử lý mở hoặc tải về tùy ý
-                    flowLayoutPanel1.Controls.Add(fileButton);
+                    // Tên file (Label clickable)
+                    var fileLabel = new Label
+                    {
+                        Text = file.Name,
+                        AutoSize = false,
+                        Width = filePanel.Width - 60, // Trừ khoảng cho icon
+                        Height = 40,
+                        Font = new Font("Segoe UI", 12),
+                        TextAlign = ContentAlignment.MiddleLeft,
+                        Dock = DockStyle.Left,
+                        Cursor = Cursors.Hand,
+                        Padding = new Padding(5, 10, 5, 5),
+                        Tag = file.Id
+                    };
+                    fileLabel.Click += FileButton_Click;
+
+                    // Icon tải về (PictureBox)
+                    var downloadIcon = new PictureBox
+                    {
+                        Image = Properties.Resources.icon_download, // Nhớ add icon này trong Resources
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        Width = 32,
+                        Height = 32,
+                        Cursor = Cursors.Hand,
+                        Dock = DockStyle.Right,
+                        Margin = new Padding(5),
+                        Tag = file // Truyền full object để lấy ID & Name
+                    };
+                    downloadIcon.Click += async (s, e) =>
+                    {
+                        var picBox = s as PictureBox;
+                        var driveFile = picBox.Tag as Google.Apis.Drive.v3.Data.File;
+
+                        using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                        {
+                            // Tách tên file và extension
+                            string originalName = Path.GetFileNameWithoutExtension(driveFile.Name);
+                            string extension = Path.GetExtension(driveFile.Name);
+
+                            // Đặt tên gốc là tên_1
+                            string baseName = originalName;
+                            string suggestedName = baseName + extension;
+                            string folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Hoặc mặc định theo nhu cầu
+
+                            int index = 1;
+                            while (File.Exists(Path.Combine(folder, suggestedName)))
+                            {
+                                index++;
+                                suggestedName = $"{originalName}_{index}{extension}";
+                            }
+
+                            // Đề xuất file chưa tồn tại
+                            saveFileDialog.InitialDirectory = folder;
+                            saveFileDialog.FileName = suggestedName;
+                            saveFileDialog.Filter = "Excel Files|*.xlsx;*.xls|CSV Files|*.csv|All Files|*.*";
+
+                            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                            {
+                                try
+                                {
+                                    var requestDownload = service.Files.Get(driveFile.Id);
+                                    var stream = new MemoryStream();
+                                    await requestDownload.DownloadAsync(stream);
+
+                                    File.WriteAllBytes(saveFileDialog.FileName, stream.ToArray());
+
+                                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                                    guna2MessageDialog1.Show("Tải file thành công!", "Thông báo");
+                                }
+                                catch (Exception ex)
+                                {
+                                    guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                                    guna2MessageDialog1.Show(ex.Message, "Lỗi");
+                                }
+                            }
+                        }
+                    };
+
+
+                    // Gắn vào FlowLayoutPanel
+                    filePanel.Controls.Add(fileLabel);
+                    filePanel.Controls.Add(downloadIcon);
+                    flowLayoutPanel1.Controls.Add(filePanel);
                 }
 
                 flowLayoutPanel1.AutoScroll = true;
@@ -232,20 +338,6 @@ namespace ChiaseNoiBo
             }
         }
 
-
-        /// <summary>
-        /// Xử lý khi người dùng nhấn vào file để mở
-        /// </summary>
-        //private void FileButton_Click(object sender, EventArgs e)
-        //{
-        //    Button btn = sender as Button;
-        //    string fileId = btn.Tag.ToString();
-        //    string fileName = btn.Text;
-
-        //    // Mở Form1 để hiển thị nội dung file
-        //    Form1 form = new Form1(fileId, fileName);
-        //    form.Show();
-        //}
         private void FileButton_Click(object sender, EventArgs e)
         {
             Control control = sender as Control;
@@ -358,14 +450,13 @@ namespace ChiaseNoiBo
         }
 
 
-        public async Task<string> GetLatestMsiFileName(DriveService service, string folderId)
+        public async Task<string> GetMsiFileName(DriveService service, string folderId)
         {
             try
             {
                 var listRequest = service.Files.List();
-                listRequest.Q = $"'{folderId}' in parents and name contains '.msi'";
-                listRequest.Fields = "files(id, name, createdTime)";
-                listRequest.OrderBy = "createdTime desc"; // Lấy file mới nhất trước
+                listRequest.Q = $"'{folderId}' in parents and name contains '.msi'";  // Tìm các file .msi
+                listRequest.Fields = "files(id, name)";  // Lấy thông tin id và name của file
 
                 var files = await listRequest.ExecuteAsync();
 
@@ -374,12 +465,13 @@ namespace ChiaseNoiBo
                     return null; // Không tìm thấy file MSI nào
                 }
 
-                return files.Files[0].Name; // Trả về tên file MSI mới nhất
+                // Nếu có file MSI, trả về tên của file đầu tiên tìm thấy
+                return files.Files[0].Name;
             }
             catch (Exception ex)
             {
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                guna2MessageDialog1.Show("Lỗi khi lấy file MSI mới nhất: " + ex.Message, "Lỗi");
+                guna2MessageDialog1.Show("Lỗi khi lấy file MSI: " + ex.Message, "Lỗi");
                 return null;
             }
         }
@@ -440,9 +532,9 @@ namespace ChiaseNoiBo
         //    }
         //}
 
-        
 
-        
+
+
 
         public void InstallMsi(string msiFilePath)
         {
@@ -550,7 +642,7 @@ namespace ChiaseNoiBo
                 guna2MessageDialog1.Show($"Hệ thống đã có phiên bản mới! Vui lòng cập nhật để trải nghiệm chức năng mới nhất!");
 
                 // Bắt đầu tải file
-                string latestMsiFileName = await GetLatestMsiFileName(service, GoogleDriveUpdater.FolderId);
+                string latestMsiFileName = await GetMsiFileName(service, GoogleDriveUpdater.FolderId);
                 if (string.IsNullOrEmpty(latestMsiFileName))
                 {
                     guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;

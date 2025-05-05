@@ -27,6 +27,10 @@ namespace ChiaseNoiBo
         {
             InitializeComponent();
             SetupPlaceholders();
+            txt_password.UseSystemPasswordChar = true; // Ẩn pass ngay từ đầu
+            confirm_password.UseSystemPasswordChar = true; // Ẩn pass ngay từ đầu
+            guna2PictureBox1.Image = Properties.Resources.hidden; // Con mắt đóng
+            guna2PictureBox2.Image = Properties.Resources.hidden; // Con mắt đóng
         }
         private void SetupPlaceholders()
         {
@@ -150,15 +154,6 @@ namespace ChiaseNoiBo
             SetupPlaceholders();
         }
 
-        private void ShowSuccess(string message)
-        {
-            MessageBox.Show(message, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void ShowError(string message)
-        {
-            MessageBox.Show(message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
 
     
        
@@ -291,14 +286,27 @@ namespace ChiaseNoiBo
                 return sb.ToString();
             }
         }
+        private bool IsStrongPassword(string password)
+        {
+            // Tối thiểu 8 ký tự, ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt
+            var regex = new System.Text.RegularExpressions.Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$");
+            return regex.IsMatch(password);
+        }
+
         private async void guna2Button1_Click(object sender, EventArgs e)
         {
             if (!isValidate()) return;
 
             string name = txt_name.Text.Trim();
             string email = txt_email.Text.Trim();
-            string password = txt_password.Text.Trim() + "_phcn";
-            string hashedPassword = HashPasswordSHA256(password);
+            string password = txt_password.Text.Trim() ;
+            if (!IsStrongPassword(password))
+            {
+                ShowMessage("Mật khẩu phải có ít nhất 8 ký tự, gồm chữ hoa, chữ thường, số và ký tự đặc biệt.", "Cảnh báo", MessageDialogIcon.Warning);
+                return;
+            }
+
+            string hashedPassword = HashPasswordSHA256(password + "_phcn");
             if (await CheckEmailExistsInExcelAsync(email))
             {
                 ShowMessage("Email đã tồn tại trong hệ thống!", "Cảnh báo",MessageDialogIcon.Warning);
@@ -353,6 +361,22 @@ namespace ChiaseNoiBo
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            txt_password.UseSystemPasswordChar = !txt_password.UseSystemPasswordChar;
+            guna2PictureBox1.Image = txt_password.UseSystemPasswordChar
+                ? Properties.Resources.hidden
+                : Properties.Resources.eye;
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            confirm_password.UseSystemPasswordChar = !confirm_password.UseSystemPasswordChar;
+            guna2PictureBox2.Image = confirm_password.UseSystemPasswordChar
+                ? Properties.Resources.hidden
+                : Properties.Resources.eye;
         }
     }
 }
